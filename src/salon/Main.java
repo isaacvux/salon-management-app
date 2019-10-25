@@ -346,29 +346,55 @@ public class Main extends Application {
     }
 
     public void restoreGUI(){
-        controller.comboBox_0.setValue(null);
-        controller.addButton_0.setDisable(true);
-        controller.listView_0a.setItems(null);
-        controller.listView_0b.setItems(null);
-        controller.infoLabel_0.setText("");
-
-        controller.comboBox_1.setValue(null);
-        controller.addButton_1.setDisable(true);
-        controller.listView_1a.setItems(null);
-        controller.listView_1b.setItems(null);
-        controller.infoLabel_1.setText("");
-
-
-
+        for(int i = 0; i < controller.comboBoxes.size(); i++) {
+            controller.comboBoxes.get(i).setValue(null);
+            controller.addButtons.get(i).setDisable(true);
+            controller.listViews_a.get(i).setItems(null);
+            controller.listViews_b.get(i).setItems(null);
+            controller.infoLabels.get(i).setText("");
+        }
+//        controller.comboBox_0.setValue(null);
+//        controller.addButton_0.setDisable(true);
+//        controller.listView_0a.setItems(null);
+//        controller.listView_0b.setItems(null);
+//        controller.infoLabel_0.setText("");
+//
+//        controller.comboBox_1.setValue(null);
+//        controller.addButton_1.setDisable(true);
+//        controller.listView_1a.setItems(null);
+//        controller.listView_1b.setItems(null);
+//        controller.infoLabel_1.setText("");
 
         for(int i = 0; i < date.getPersons().size(); i++) {
             if(date.getPersons().get(i).getIndex() == 0) {
                 controller.comboBox_0.getSelectionModel().select(date.getPersons().get(i));
-//                controller.updatePersonInfo(date.getPersons().get(i), controller.turnInfo_0, controller.moneyInfo_0);
             }
             if(date.getPersons().get(i).getIndex() == 1) {
                 controller.comboBox_1.getSelectionModel().select(date.getPersons().get(i));
-//                controller.updatePersonInfo(date.getPersons().get(i), controller.turnInfo_1, controller.moneyInfo_1);
+            }
+            if(date.getPersons().get(i).getIndex() == 2) {
+                controller.comboBox_2.getSelectionModel().select(date.getPersons().get(i));
+            }
+            if(date.getPersons().get(i).getIndex() == 3) {
+                controller.comboBox_3.getSelectionModel().select(date.getPersons().get(i));
+            }
+            if(date.getPersons().get(i).getIndex() == 4) {
+                controller.comboBox_4.getSelectionModel().select(date.getPersons().get(i));
+            }
+            if(date.getPersons().get(i).getIndex() == 5) {
+                controller.comboBox_5.getSelectionModel().select(date.getPersons().get(i));
+            }
+            if(date.getPersons().get(i).getIndex() == 6) {
+                controller.comboBox_6.getSelectionModel().select(date.getPersons().get(i));
+            }
+            if(date.getPersons().get(i).getIndex() == 7) {
+                controller.comboBox_7.getSelectionModel().select(date.getPersons().get(i));
+            }
+            if(date.getPersons().get(i).getIndex() == 8) {
+                controller.comboBox_8.getSelectionModel().select(date.getPersons().get(i));
+            }
+            if(date.getPersons().get(i).getIndex() == 9) {
+                controller.comboBox_9.getSelectionModel().select(date.getPersons().get(i));
             }
         }
     }

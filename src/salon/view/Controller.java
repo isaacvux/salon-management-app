@@ -13,13 +13,11 @@ import salon.model.Turn;
 import java.io.*;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     public Boolean isAdjusted;
-
-    @FXML
-    public Button mainDashButton;
 
     @FXML
     public Button historyButton;
@@ -60,6 +58,148 @@ public class Controller implements Initializable {
     @FXML
     public Label infoLabel_1;
 
+    // Set 2
+    @FXML
+    public ComboBox comboBox_2;
+
+    @FXML
+    public Button addButton_2;
+
+    @FXML
+    public ListView listView_2a;
+
+    @FXML
+    public ListView listView_2b;
+
+    @FXML
+    public Label infoLabel_2;
+
+    // Set 3
+    @FXML
+    public ComboBox comboBox_3;
+
+    @FXML
+    public Button addButton_3;
+
+    @FXML
+    public ListView listView_3a;
+
+    @FXML
+    public ListView listView_3b;
+
+    @FXML
+    public Label infoLabel_3;
+
+    // Set 4
+    @FXML
+    public ComboBox comboBox_4;
+
+    @FXML
+    public Button addButton_4;
+
+    @FXML
+    public ListView listView_4a;
+
+    @FXML
+    public ListView listView_4b;
+
+    @FXML
+    public Label infoLabel_4;
+
+    // Set 5
+    @FXML
+    public ComboBox comboBox_5;
+
+    @FXML
+    public Button addButton_5;
+
+    @FXML
+    public ListView listView_5a;
+
+    @FXML
+    public ListView listView_5b;
+
+    @FXML
+    public Label infoLabel_5;
+
+    // Set 6
+    @FXML
+    public ComboBox comboBox_6;
+
+    @FXML
+    public Button addButton_6;
+
+    @FXML
+    public ListView listView_6a;
+
+    @FXML
+    public ListView listView_6b;
+
+    @FXML
+    public Label infoLabel_6;
+
+    // Set 7
+    @FXML
+    public ComboBox comboBox_7;
+
+    @FXML
+    public Button addButton_7;
+
+    @FXML
+    public ListView listView_7a;
+
+    @FXML
+    public ListView listView_7b;
+
+    @FXML
+    public Label infoLabel_7;
+
+    // Set 8
+    @FXML
+    public ComboBox comboBox_8;
+
+    @FXML
+    public Button addButton_8;
+
+    @FXML
+    public ListView listView_8a;
+
+    @FXML
+    public ListView listView_8b;
+
+    @FXML
+    public Label infoLabel_8;
+
+    // Set 9
+    @FXML
+    public ComboBox comboBox_9;
+
+    @FXML
+    public Button addButton_9;
+
+    @FXML
+    public ListView listView_9a;
+
+    @FXML
+    public ListView listView_9b;
+
+    @FXML
+    public Label infoLabel_9;
+
+    // Super set
+
+    public ArrayList<ComboBox> comboBoxes = new ArrayList<>();
+
+    public ArrayList<Button> addButtons = new ArrayList<>();
+
+    public ArrayList<ListView> listViews_a = new ArrayList<>();
+
+    public ArrayList<ListView> listViews_b = new ArrayList<>();
+
+    public ArrayList<Label> infoLabels = new ArrayList<>();
+
+
+
     // Reference to the main application.
     private Main main;
 
@@ -74,10 +214,95 @@ public class Controller implements Initializable {
     public void setMain(Main main) {
         this.main = main;
 
-        comboBox_0.setItems(main.date.getPersons());
-        comboBox_0.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
-        comboBox_1.setItems(main.date.getPersons());
-        comboBox_1.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+        comboBoxes.add(comboBox_0);
+        comboBoxes.add(comboBox_1);
+        comboBoxes.add(comboBox_2);
+        comboBoxes.add(comboBox_3);
+        comboBoxes.add(comboBox_4);
+        comboBoxes.add(comboBox_5);
+        comboBoxes.add(comboBox_6);
+        comboBoxes.add(comboBox_7);
+        comboBoxes.add(comboBox_8);
+        comboBoxes.add(comboBox_9);
+
+        addButtons.add(addButton_0);
+        addButtons.add(addButton_1);
+        addButtons.add(addButton_2);
+        addButtons.add(addButton_3);
+        addButtons.add(addButton_4);
+        addButtons.add(addButton_5);
+        addButtons.add(addButton_6);
+        addButtons.add(addButton_7);
+        addButtons.add(addButton_8);
+        addButtons.add(addButton_9);
+
+        listViews_a.add(listView_0a);
+        listViews_a.add(listView_1a);
+        listViews_a.add(listView_2a);
+        listViews_a.add(listView_3a);
+        listViews_a.add(listView_4a);
+        listViews_a.add(listView_5a);
+        listViews_a.add(listView_6a);
+        listViews_a.add(listView_7a);
+        listViews_a.add(listView_8a);
+        listViews_a.add(listView_9a);
+
+        listViews_b.add(listView_0b);
+        listViews_b.add(listView_1b);
+        listViews_b.add(listView_2b);
+        listViews_b.add(listView_3b);
+        listViews_b.add(listView_4b);
+        listViews_b.add(listView_5b);
+        listViews_b.add(listView_6b);
+        listViews_b.add(listView_7b);
+        listViews_b.add(listView_8b);
+        listViews_b.add(listView_9b);
+
+        infoLabels.add(infoLabel_0);
+        infoLabels.add(infoLabel_1);
+        infoLabels.add(infoLabel_2);
+        infoLabels.add(infoLabel_3);
+        infoLabels.add(infoLabel_4);
+        infoLabels.add(infoLabel_5);
+        infoLabels.add(infoLabel_6);
+        infoLabels.add(infoLabel_7);
+        infoLabels.add(infoLabel_8);
+        infoLabels.add(infoLabel_9);
+
+        for(int i = 0; i < comboBoxes.size(); i++) {
+            comboBoxes.get(i).setItems(main.date.getPersons());
+            comboBoxes.get(i).setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+        }
+
+//        comboBox_0.setItems(main.date.getPersons());
+//        comboBox_0.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+//
+//        comboBox_1.setItems(main.date.getPersons());
+//        comboBox_1.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+//
+//        comboBox_2.setItems(main.date.getPersons());
+//        comboBox_2.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+//
+//        comboBox_3.setItems(main.date.getPersons());
+//        comboBox_3.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+//
+//        comboBox_4.setItems(main.date.getPersons());
+//        comboBox_4.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+//
+//        comboBox_5.setItems(main.date.getPersons());
+//        comboBox_5.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+//
+//        comboBox_6.setItems(main.date.getPersons());
+//        comboBox_6.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+//
+//        comboBox_7.setItems(main.date.getPersons());
+//        comboBox_7.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+//
+//        comboBox_8.setItems(main.date.getPersons());
+//        comboBox_8.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
+//
+//        comboBox_9.setItems(main.date.getPersons());
+//        comboBox_9.setStyle("-fx-font-size : 18.0; -fx-font-weight: bold");
 
     }
 
@@ -104,6 +329,78 @@ public class Controller implements Initializable {
 
         listView_1a.setOnKeyPressed(e -> handleListView(e, listView_1a, main.tempPerson.getTurns(),1, infoLabel_1));
         listView_1b.setOnKeyPressed(e -> handleListView(e, listView_1b, main.tempPerson.getBonuses(),1, infoLabel_1));
+
+        // Set 2
+        comboBox_2.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,2 , addButton_2, listView_2a, listView_2b, infoLabel_2));
+
+        addButton_2.setOnAction(e -> handleAddTurnButton(2, infoLabel_2));
+
+        listView_2a.setOnKeyPressed(e -> handleListView(e, listView_2a, main.tempPerson.getTurns(),2, infoLabel_2));
+        listView_2b.setOnKeyPressed(e -> handleListView(e, listView_2b, main.tempPerson.getBonuses(),2, infoLabel_2));
+
+        // Set 3
+        comboBox_3.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,3 , addButton_3, listView_3a, listView_3b, infoLabel_3));
+
+        addButton_3.setOnAction(e -> handleAddTurnButton(3, infoLabel_3));
+
+        listView_3a.setOnKeyPressed(e -> handleListView(e, listView_3a, main.tempPerson.getTurns(),3, infoLabel_3));
+        listView_3b.setOnKeyPressed(e -> handleListView(e, listView_3b, main.tempPerson.getBonuses(),3, infoLabel_3));
+
+        // Set 4
+        comboBox_4.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,4 , addButton_4, listView_4a, listView_4b, infoLabel_4));
+
+        addButton_4.setOnAction(e -> handleAddTurnButton(4, infoLabel_4));
+
+        listView_4a.setOnKeyPressed(e -> handleListView(e, listView_4a, main.tempPerson.getTurns(),4, infoLabel_4));
+        listView_4b.setOnKeyPressed(e -> handleListView(e, listView_4b, main.tempPerson.getBonuses(),4, infoLabel_4));
+
+        // Set 5
+        comboBox_5.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 5, addButton_5, listView_5a, listView_5b, infoLabel_5));
+
+        addButton_5.setOnAction(e -> handleAddTurnButton(5, infoLabel_5));
+
+        listView_5a.setOnKeyPressed(e -> handleListView(e, listView_5a, main.tempPerson.getTurns(),5, infoLabel_5));
+        listView_5b.setOnKeyPressed(e -> handleListView(e, listView_5b, main.tempPerson.getBonuses(),5, infoLabel_5));
+
+        // Set 6
+        comboBox_6.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 6, addButton_6, listView_6a, listView_6b, infoLabel_6));
+
+        addButton_6.setOnAction(e -> handleAddTurnButton(6, infoLabel_6));
+
+        listView_6a.setOnKeyPressed(e -> handleListView(e, listView_6a, main.tempPerson.getTurns(),6, infoLabel_6));
+        listView_6b.setOnKeyPressed(e -> handleListView(e, listView_6b, main.tempPerson.getBonuses(),6, infoLabel_6));
+
+        // Set 7
+        comboBox_7.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,7 , addButton_7, listView_7a, listView_7b, infoLabel_7));
+
+        addButton_7.setOnAction(e -> handleAddTurnButton(7, infoLabel_7));
+
+        listView_7a.setOnKeyPressed(e -> handleListView(e, listView_7a, main.tempPerson.getTurns(),7, infoLabel_7));
+        listView_7b.setOnKeyPressed(e -> handleListView(e, listView_7b, main.tempPerson.getBonuses(),7, infoLabel_7));
+
+        // Set 8
+        comboBox_8.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 8, addButton_8, listView_8a, listView_8b, infoLabel_8));
+
+        addButton_8.setOnAction(e -> handleAddTurnButton(8, infoLabel_8));
+
+        listView_8a.setOnKeyPressed(e -> handleListView(e, listView_8a, main.tempPerson.getTurns(),8, infoLabel_8));
+        listView_8b.setOnKeyPressed(e -> handleListView(e, listView_8b, main.tempPerson.getBonuses(),8, infoLabel_8));
+
+        // Set 9
+        comboBox_9.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 9, addButton_9, listView_9a, listView_9b, infoLabel_9));
+
+        addButton_9.setOnAction(e -> handleAddTurnButton(9, infoLabel_9));
+
+        listView_9a.setOnKeyPressed(e -> handleListView(e, listView_9a, main.tempPerson.getTurns(),9, infoLabel_9));
+        listView_9b.setOnKeyPressed(e -> handleListView(e, listView_9b, main.tempPerson.getBonuses(),9, infoLabel_9));
     }
 
     public void choosingName(Person oldPerson, Person newPerson, int index, Button addButton, ListView listView_a, ListView listView_b, Label thisLabel) {
@@ -198,34 +495,6 @@ public class Controller implements Initializable {
             main.primaryStage.setScene(main.turnScene);
         }
     }
-
-//    public void updatePersonInfo(Person person, Label turnInfo, Label moneyInfo) {
-//        double total = 0.0;
-//        double tip = 0.0;
-//        int numOfTurns = 0;
-//        int numOfBonuses = 0;
-//
-//        for(int i = 0; i < person.getTurns().size(); i++) {
-//
-//            total += person.getTurns().get(i).getBase();
-//            tip += person.getTurns().get(i).getTip();
-//
-//            if((person.getTurns().get(i).getBase() + person.getTurns().get(i).getOff()) >= 25.00) {
-//                numOfTurns ++;
-//            }
-//        }
-//
-//        numOfBonuses = person.getTurns().size() - numOfTurns;
-//
-//        person.setTotal(total);
-//        person.setTip(tip);
-//
-//        if(main.tempTurnInfo != null && main.tempMoneyInfo != null) {
-//            moneyInfo.setText("Total: $" + person.getTotal() + "\nTip:     $" + person.getTip());
-//
-//            turnInfo.setText("Turns:       " + numOfTurns + "\nBonuses: " + numOfBonuses);
-//        }
-//    }
 
     @FXML
     public void handlePrintButton() {
