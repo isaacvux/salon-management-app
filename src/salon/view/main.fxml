@@ -27,25 +27,15 @@
         <rowConstraints>
           <RowConstraints maxHeight="194.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="374.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="77.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="319.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <ListView fx:id="listView_0a" prefHeight="300.0" prefWidth="109.0" GridPane.rowIndex="1" />
-            <ComboBox prefHeight="27.0" prefWidth="200.0" GridPane.rowIndex="4" />
-            <Button disable="true" mnemonicParsing="false" prefWidth="200.0" text="Add" GridPane.rowIndex="5" />
-            <ComboBox prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button disable="true" mnemonicParsing="false" prefWidth="200.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <ComboBox prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button disable="true" mnemonicParsing="false" prefWidth="200.0" text="Add" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <ComboBox prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Button disable="true" mnemonicParsing="false" prefWidth="200.0" text="Add" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <ComboBox prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <Button disable="true" mnemonicParsing="false" prefWidth="200.0" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="5" />
             <ListView fx:id="listView_1a" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
@@ -100,29 +90,14 @@
                      </font></Button>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <children>
-                  <Label prefHeight="50.0" prefWidth="100.0" text="Label" />
-                  <Label prefHeight="50.0" prefWidth="100.0" text="Label" />
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <children>
-                  <Label prefHeight="50.0" prefWidth="100.0" text="Label" />
-                  <Label prefHeight="50.0" prefWidth="100.0" text="Label" />
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
-               <children>
-                  <Label prefHeight="50.0" prefWidth="100.0" text="Label" />
-                  <Label prefHeight="50.0" prefWidth="100.0" text="Label" />
-               </children>
-            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
             <ListView fx:id="listView_0b" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
             <ListView fx:id="listView_1b" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label fx:id="infoLabel_0" prefHeight="50.0" prefWidth="236.0" text="Label" GridPane.rowIndex="3">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Label fx:id="infoLabel_1" prefHeight="87.0" prefWidth="277.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -130,6 +105,56 @@
                   <Font size="18.0" />
                </font>
             </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+               <children>
+                  <ComboBox prefHeight="50.0" prefWidth="120.0" />
+                  <Button disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <ComboBox prefHeight="50.0" prefWidth="120.0" />
+                  <Button disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <ComboBox prefHeight="50.0" prefWidth="120.0" />
+                  <Button disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <children>
+                  <ComboBox prefHeight="50.0" prefWidth="120.0" />
+                  <Button disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <children>
+                  <ComboBox prefHeight="50.0" prefWidth="120.0" />
+                  <Button disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
          <BorderPane.margin>
             <Insets />
