@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -226,9 +227,11 @@
    <left>
       <VBox prefHeight="800.0" prefWidth="50.0" BorderPane.alignment="CENTER">
          <children>
-            <Region prefHeight="500.0" prefWidth="50.0" />
+            <Region prefHeight="139.0" prefWidth="50.0" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
             <Button fx:id="historyButton" mnemonicParsing="false" onAction="#handleHistoryButton" prefHeight="150.0" prefWidth="50.0" text="His" />
             <Button fx:id="printButton" mnemonicParsing="false" onAction="#handlePrintButton" prefHeight="150.0" prefWidth="50.0" text="Print" />
+            <Button fx:id="preferencesButton" mnemonicParsing="false" onAction="#handlePreferencesButton" prefHeight="87.0" prefWidth="50.0" text="Settings" />
          </children>
       </VBox>
    </left>

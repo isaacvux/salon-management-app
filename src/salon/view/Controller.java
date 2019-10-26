@@ -25,6 +25,9 @@ public class Controller implements Initializable {
     @FXML
     public Button printButton;
 
+    @FXML
+    public Button preferencesButton;
+
     // Set 0
     @FXML
     public ComboBox comboBox_0;
@@ -499,12 +502,21 @@ public class Controller implements Initializable {
     @FXML
     public void handlePrintButton() {
         main.secondatyStage.setScene(main.printScene);
+        main.secondatyStage.setTitle("Print Report");
         main.secondatyStage.showAndWait();
     }
 
     @FXML
     public void handleHistoryButton() {
         main.secondatyStage.setScene(main.historyScene);
+        main.secondatyStage.setTitle("History");
+        main.secondatyStage.showAndWait();
+    }
+
+    @FXML
+    public void handlePreferencesButton() {
+        main.secondatyStage.setScene(main.preferencesScene);
+        main.secondatyStage.setTitle("Preferences");
         main.secondatyStage.showAndWait();
     }
 

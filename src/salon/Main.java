@@ -11,14 +11,13 @@ import salon.model.Date;
 import salon.model.Person;
 import salon.model.Turn;
 import salon.util.BooleanWrapper;
-import salon.view.Controller;
-import salon.view.HistoryController;
-import salon.view.PrintController;
-import salon.view.TurnController;
+import salon.view.*;
 import javafx.scene.control.*;
 
 import java.io.*;
+import java.nio.file.Path;
 import java.time.LocalDate;
+import java.util.prefs.Preferences;
 
 public class Main extends Application {
 
@@ -29,11 +28,15 @@ public class Main extends Application {
     public Scene turnScene;
     public Scene printScene;
     public Scene historyScene;
+    public Scene preferencesScene;
 
     public Controller controller;
     public TurnController turnController;
     public PrintController printController;
     public HistoryController historyController;
+    public PreferencesController preferencesController;
+
+    public String fileDirectory;
 
     public Date date = new Date();
 
@@ -48,6 +51,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        fileDirectory = "/Users/isaacvu/Desktop/";
+
         tempLocalDate = LocalDate.now();
 
         if(checkForFile(tempLocalDate)) {
@@ -112,6 +117,17 @@ public class Main extends Application {
             e.printStackTrace();
         }
 
+        try {
+            FXMLLoader preferencesLoader = new FXMLLoader(getClass().getResource("view/preferences.fxml"));
+            Parent root5 = preferencesLoader.load();
+            preferencesScene = new Scene(root5);
+//            mainScene.getStylesheets().add("/main/darkTheme.css");
+            preferencesController = preferencesLoader.getController();
+            preferencesController.setMain(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         restoreGUI();
 
         primaryStage.setScene(mainScene);
@@ -125,7 +141,7 @@ public class Main extends Application {
     public void readPersonList() {
         System.out.println("\nReading person list...");
         try {
-            File myFile = new File("/Users/isaacvu/Desktop/employeesList.txt");
+            File myFile = new File(fileDirectory + "employeesList.txt");
 
             FileReader fileReader = new FileReader(myFile);
 
@@ -162,7 +178,7 @@ public class Main extends Application {
         System.out.println("\n\nLoading information to application...");
         System.out.println("\n\nReading from file...");
         try {
-            File myFile = new File("/Users/isaacvu/Desktop/" + localDate + ".txt");
+            File myFile = new File(fileDirectory + localDate + ".txt");
 
             FileReader fileReader = new FileReader(myFile);
 
@@ -252,7 +268,7 @@ public class Main extends Application {
 
     public void writeInformation(LocalDate thisDate){
         try {
-            FileWriter writer = new FileWriter("/Users/isaacvu/Desktop/" + thisDate + ".txt");
+            FileWriter writer = new FileWriter(fileDirectory + thisDate + ".txt");
 
             writer.write("" + date.getDate() + "\n" + "Report" + "\n");
 
@@ -333,7 +349,7 @@ public class Main extends Application {
     }
 
     public boolean checkForFile(LocalDate thisDate) {
-        File temp = new File("/Users/isaacvu/Desktop/" + thisDate + ".txt");
+        File temp = new File(fileDirectory + thisDate + ".txt");
 
         boolean exists = temp.exists();
 
@@ -404,4 +420,23 @@ public class Main extends Application {
             tempTurn.getDoneServices().get(i).setFlag(false);
         }
     }
+
+//    public String getFilePath() {
+//        Preferences prefs = Preferences.userNodeForPackage(Main.class);
+//        String filePath = prefs.get("filePath", null);
+//        if (filePath != null) {
+//            return filePath;
+//        } else {
+//            return null;
+//        }
+//    }
+//
+//    public void setFilePath(File file) {
+//        Preferences prefs = Preferences.userNodeForPackage(Main.class);
+//        if (file != null) {
+//            prefs.put("filePath", file.getPath());
+//        } else {
+//            prefs.remove("filePath");
+//        }
+//    }
 }

@@ -7,10 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/salon/view/PreferencesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/salon/view/preferences.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/salon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/salon/view/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/view/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/salon/view/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/view/main.fxml" afterDir="false" />
@@ -68,6 +68,28 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/salon/view/PrintController.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="370">
+                    <caret line="104" column="4" lean-forward="true" selection-start-line="104" selection-start-column="4" selection-end-line="113" selection-end-column="5" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
@@ -87,11 +109,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/salon/view/Controller.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/salon/view/PreferencesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-809">
-              <caret line="397" column="156" selection-start-line="397" selection-start-column="156" selection-end-line="397" selection-end-column="156" />
+            <state relative-caret-position="310">
+              <caret line="46" column="72" lean-forward="true" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#299#300#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#1286#1287#0" expanded="true" />
+                <element signature="e#1375#1376#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/salon/view/HistoryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,10 +138,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/salon/view/print.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="252" selection-start-line="12" selection-start-column="226" selection-end-line="12" selection-end-column="252" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/salon/view/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="507">
+              <caret line="518" column="52" lean-forward="true" selection-start-line="518" selection-start-column="52" selection-end-line="518" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/salon/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5158">
-              <caret line="395" column="55" selection-start-line="395" selection-start-column="55" selection-end-line="395" selection-end-column="55" />
+            <state relative-caret-position="5265">
+              <caret line="353" column="39" lean-forward="true" selection-start-line="353" selection-start-column="39" selection-end-line="353" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,8 +176,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -128,6 +188,7 @@
       <find>label</find>
       <find>handlePri</find>
       <find>jmetro</find>
+      <find>getPer</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -173,6 +234,8 @@
         <option value="$PROJECT_DIR$/src/salon/skin/JMetroBase.css" />
         <option value="$PROJECT_DIR$/out/production/SalonManagement3/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/salon/view/Controller.java" />
+        <option value="$PROJECT_DIR$/src/salon/view/preferences.fxml" />
+        <option value="$PROJECT_DIR$/src/salon/view/PreferencesController.java" />
         <option value="$PROJECT_DIR$/src/salon/Main.java" />
       </list>
     </option>
@@ -193,7 +256,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,7 +340,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -482,19 +545,21 @@
       <workItem from="1571948636606" duration="1438000" />
       <workItem from="1571950995181" duration="1434000" />
       <workItem from="1571975302769" duration="943000" />
-      <workItem from="1571982431201" duration="4485000" />
+      <workItem from="1571982431201" duration="5034000" />
+      <workItem from="1572037870165" duration="1113000" />
+      <workItem from="1572059871204" duration="5410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209821000" />
+    <option name="totallyTimeSpent" value="216893000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="23" width="1232" height="777" extended-state="6" />
+    <frame x="50" y="23" width="1230" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19411765" />
-      <window_info id="Structure" order="1" weight="0.20840336" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1936027" />
+      <window_info id="Structure" order="1" weight="0.20820022" />
       <window_info id="Favorites" order="2" weight="0.3296796" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -502,7 +567,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" x="-262" y="-1035" width="657" height="1035" id="Run" order="2" type="WINDOWED" visible="true" weight="0.32846716" />
+      <window_info anchor="bottom" x="-226" y="-957" width="803" height="718" id="Run" order="2" type="WINDOWED" visible="true" weight="0.32846716" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -579,21 +644,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../SalonManagement/src/information/Turn.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Advanced Java/Demo/JavaFX_ComboBox/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-395">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SalonManagement/src/information/Employee.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/salon/util/StringWrapper.java" />
     <entry file="file://$PROJECT_DIR$/../SalonManagement/src/main/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -751,24 +801,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/SalonManagement3/src/salon/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/salon/view/print.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="134" selection-start-line="13" selection-start-column="134" selection-end-line="13" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/salon/view/HistoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/salon/model/Date.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -789,16 +821,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1812#1813#0" expanded="true" />
             <element signature="e#1842#1843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/salon/view/PrintController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -894,10 +916,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/salon/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/salon/view/HistoryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5158">
-          <caret line="395" column="55" selection-start-line="395" selection-start-column="55" selection-end-line="395" selection-end-column="55" />
+        <state relative-caret-position="262">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/salon/view/print.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="252" selection-start-line="12" selection-start-column="226" selection-end-line="12" selection-end-column="252" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/salon/view/preferences.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="258" selection-start-line="13" selection-start-column="258" selection-end-line="13" selection-end-column="258" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/salon/view/PrintController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="104" column="4" lean-forward="true" selection-start-line="104" selection-start-column="4" selection-end-line="113" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -906,8 +954,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/salon/view/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-809">
-          <caret line="397" column="156" selection-start-line="397" selection-start-column="156" selection-end-line="397" selection-end-column="156" />
+        <state relative-caret-position="507">
+          <caret line="518" column="52" lean-forward="true" selection-start-line="518" selection-start-column="52" selection-end-line="518" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/salon/view/PreferencesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="46" column="72" lean-forward="true" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1375#1376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/AddressApp-Part-7/src/ch/makery/address/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="225" column="4" selection-start-line="225" selection-start-column="4" selection-end-line="238" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/salon/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5265">
+          <caret line="353" column="39" lean-forward="true" selection-start-line="353" selection-start-column="39" selection-end-line="353" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
