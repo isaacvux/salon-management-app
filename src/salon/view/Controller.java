@@ -2,7 +2,10 @@ package salon.view;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Font;
 import salon.Main;
@@ -317,97 +320,127 @@ public class Controller implements Initializable {
 
         // Set 0
         comboBox_0.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 0, addButton_0, listView_0a, listView_0b, infoLabel_0));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 0, comboBox_0, addButton_0, listView_0a, listView_0b, infoLabel_0));
 
         addButton_0.setOnAction(e -> handleAddTurnButton(0, infoLabel_0));
+
+        listView_0a.setOnMouseClicked(e -> setTempPersonByListView(0));
+        listView_0b.setOnMouseClicked(e -> setTempPersonByListView(0));
 
         listView_0a.setOnKeyPressed(e -> handleListView(e, listView_0a, main.tempPerson.getTurns(),0, infoLabel_0));
         listView_0b.setOnKeyPressed(e -> handleListView(e, listView_0b, main.tempPerson.getBonuses(),0, infoLabel_0));
 
         // Set 1
         comboBox_1.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 1, addButton_1, listView_1a, listView_1b, infoLabel_1));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 1, comboBox_1, addButton_1, listView_1a, listView_1b, infoLabel_1));
 
         addButton_1.setOnAction(e -> handleAddTurnButton(1, infoLabel_1));
+
+        listView_1a.setOnMouseClicked(e -> setTempPersonByListView(1));
+        listView_1b.setOnMouseClicked(e -> setTempPersonByListView(1));
 
         listView_1a.setOnKeyPressed(e -> handleListView(e, listView_1a, main.tempPerson.getTurns(),1, infoLabel_1));
         listView_1b.setOnKeyPressed(e -> handleListView(e, listView_1b, main.tempPerson.getBonuses(),1, infoLabel_1));
 
         // Set 2
         comboBox_2.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,2 , addButton_2, listView_2a, listView_2b, infoLabel_2));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,2 , comboBox_2,addButton_2, listView_2a, listView_2b, infoLabel_2));
 
         addButton_2.setOnAction(e -> handleAddTurnButton(2, infoLabel_2));
+
+        listView_2a.setOnMouseClicked(e -> setTempPersonByListView(2));
+        listView_2b.setOnMouseClicked(e -> setTempPersonByListView(2));
 
         listView_2a.setOnKeyPressed(e -> handleListView(e, listView_2a, main.tempPerson.getTurns(),2, infoLabel_2));
         listView_2b.setOnKeyPressed(e -> handleListView(e, listView_2b, main.tempPerson.getBonuses(),2, infoLabel_2));
 
         // Set 3
         comboBox_3.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,3 , addButton_3, listView_3a, listView_3b, infoLabel_3));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,3, comboBox_3, addButton_3, listView_3a, listView_3b, infoLabel_3));
 
         addButton_3.setOnAction(e -> handleAddTurnButton(3, infoLabel_3));
+
+        listView_3a.setOnMouseClicked(e -> setTempPersonByListView(3));
+        listView_3b.setOnMouseClicked(e -> setTempPersonByListView(3));
 
         listView_3a.setOnKeyPressed(e -> handleListView(e, listView_3a, main.tempPerson.getTurns(),3, infoLabel_3));
         listView_3b.setOnKeyPressed(e -> handleListView(e, listView_3b, main.tempPerson.getBonuses(),3, infoLabel_3));
 
         // Set 4
         comboBox_4.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,4 , addButton_4, listView_4a, listView_4b, infoLabel_4));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,4, comboBox_4, addButton_4, listView_4a, listView_4b, infoLabel_4));
 
         addButton_4.setOnAction(e -> handleAddTurnButton(4, infoLabel_4));
+
+        listView_4a.setOnMouseClicked(e -> setTempPersonByListView(4));
+        listView_4b.setOnMouseClicked(e -> setTempPersonByListView(4));
 
         listView_4a.setOnKeyPressed(e -> handleListView(e, listView_4a, main.tempPerson.getTurns(),4, infoLabel_4));
         listView_4b.setOnKeyPressed(e -> handleListView(e, listView_4b, main.tempPerson.getBonuses(),4, infoLabel_4));
 
         // Set 5
         comboBox_5.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 5, addButton_5, listView_5a, listView_5b, infoLabel_5));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 5, comboBox_5, addButton_5, listView_5a, listView_5b, infoLabel_5));
 
         addButton_5.setOnAction(e -> handleAddTurnButton(5, infoLabel_5));
+
+        listView_5a.setOnMouseClicked(e -> setTempPersonByListView(5));
+        listView_5b.setOnMouseClicked(e -> setTempPersonByListView(5));
 
         listView_5a.setOnKeyPressed(e -> handleListView(e, listView_5a, main.tempPerson.getTurns(),5, infoLabel_5));
         listView_5b.setOnKeyPressed(e -> handleListView(e, listView_5b, main.tempPerson.getBonuses(),5, infoLabel_5));
 
         // Set 6
         comboBox_6.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 6, addButton_6, listView_6a, listView_6b, infoLabel_6));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 6, comboBox_6, addButton_6, listView_6a, listView_6b, infoLabel_6));
 
         addButton_6.setOnAction(e -> handleAddTurnButton(6, infoLabel_6));
+
+        listView_6a.setOnMouseClicked(e -> setTempPersonByListView(6));
+        listView_6b.setOnMouseClicked(e -> setTempPersonByListView(6));
 
         listView_6a.setOnKeyPressed(e -> handleListView(e, listView_6a, main.tempPerson.getTurns(),6, infoLabel_6));
         listView_6b.setOnKeyPressed(e -> handleListView(e, listView_6b, main.tempPerson.getBonuses(),6, infoLabel_6));
 
         // Set 7
         comboBox_7.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,7 , addButton_7, listView_7a, listView_7b, infoLabel_7));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue,7, comboBox_7, addButton_7, listView_7a, listView_7b, infoLabel_7));
 
         addButton_7.setOnAction(e -> handleAddTurnButton(7, infoLabel_7));
+
+        listView_7a.setOnMouseClicked(e -> setTempPersonByListView(7));
+        listView_7b.setOnMouseClicked(e -> setTempPersonByListView(7));
 
         listView_7a.setOnKeyPressed(e -> handleListView(e, listView_7a, main.tempPerson.getTurns(),7, infoLabel_7));
         listView_7b.setOnKeyPressed(e -> handleListView(e, listView_7b, main.tempPerson.getBonuses(),7, infoLabel_7));
 
         // Set 8
         comboBox_8.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 8, addButton_8, listView_8a, listView_8b, infoLabel_8));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 8, comboBox_8, addButton_8, listView_8a, listView_8b, infoLabel_8));
 
         addButton_8.setOnAction(e -> handleAddTurnButton(8, infoLabel_8));
+
+        listView_8a.setOnMouseClicked(e -> setTempPersonByListView(8));
+        listView_8b.setOnMouseClicked(e -> setTempPersonByListView(8));
 
         listView_8a.setOnKeyPressed(e -> handleListView(e, listView_8a, main.tempPerson.getTurns(),8, infoLabel_8));
         listView_8b.setOnKeyPressed(e -> handleListView(e, listView_8b, main.tempPerson.getBonuses(),8, infoLabel_8));
 
         // Set 9
         comboBox_9.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 9, addButton_9, listView_9a, listView_9b, infoLabel_9));
+                (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 9, comboBox_9, addButton_9, listView_9a, listView_9b, infoLabel_9));
 
         addButton_9.setOnAction(e -> handleAddTurnButton(9, infoLabel_9));
+
+        listView_9a.setOnMouseClicked(e -> setTempPersonByListView(9));
+        listView_9b.setOnMouseClicked(e -> setTempPersonByListView(9));
 
         listView_9a.setOnKeyPressed(e -> handleListView(e, listView_9a, main.tempPerson.getTurns(),9, infoLabel_9));
         listView_9b.setOnKeyPressed(e -> handleListView(e, listView_9b, main.tempPerson.getBonuses(),9, infoLabel_9));
     }
 
-    public void choosingName(Person oldPerson, Person newPerson, int index, Button addButton, ListView listView_a, ListView listView_b, Label thisLabel) {
-        if(newPerson != null) {
+    public void choosingName(Person oldPerson, Person newPerson, int index, ComboBox comboBox, Button addButton, ListView listView_a, ListView listView_b, Label thisLabel) {
+        if (newPerson != null) {
             main.tempPerson = newPerson;
 
             newPerson.setIndex(index);
@@ -433,26 +466,34 @@ public class Controller implements Initializable {
             // save point
             main.writeInformation(main.tempLocalDate);
         }
-        if(oldPerson != null) {
+
+
+        if (oldPerson != null) {
             oldPerson.setIndex(-1);
-            // save point
-//            main.writeInformation(main.tempLocalDate);
         }
 
-//        updatePersonInfo(main.tempPerson, main.tempTurnInfo, main.tempMoneyInfo);
 
         System.out.println("The list is now...");
 
-        for(int i = 0; i < main.date.getPersons().size(); i++) {
+        for (int i = 0; i < main.date.getPersons().size(); i++) {
             System.out.print(main.date.getPersons().get(i).toString());
             System.out.println(": " + main.date.getPersons().get(i).getIndex());
         }
 
-        if(comboBox_1.getSelectionModel().getSelectedItem() == null) {
-            System.out.println("There you go bro...");
+
+//        if(comboBox_1.getSelectionModel().getSelectedItem() == null) {
+//            System.out.println("There you go bro...");
+//        }
+
+    }
+
+    public boolean checkLoggedInPeople(Person person) {
+        for(int i = 0; i < main.date.getPersons().size(); i++) {
+            if(main.date.getPersons().get(i).equals(person)) {
+                return false;
+            }
         }
-
-
+        return true;
     }
 
     public void handleAddTurnButton(int index, Label thisLabel) {
@@ -474,6 +515,16 @@ public class Controller implements Initializable {
         main.primaryStage.setScene(main.turnScene);
     }
 
+    public void setTempPersonByListView(int index){
+        for (int i = 0; i < main.date.getPersons().size(); i++) {
+            if (main.date.getPersons().get(i).getIndex() == index) {
+
+                // Set temporary person
+                main.tempPerson = main.date.getPersons().get(i);
+            }
+        }
+    }
+
     public void handleListView(KeyEvent e, ListView listView, ObservableList<Turn> list, int index, Label thisLabel) {
         if (e.getCode().toString().equals("ENTER")) {
 
@@ -481,15 +532,18 @@ public class Controller implements Initializable {
 
             isAdjusted = true;
 
-            for (int i = 0; i < main.date.getPersons().size(); i++) {
-                if (main.date.getPersons().get(i).getIndex() == index) {
+//            for (int i = 0; i < main.date.getPersons().size(); i++) {
+//                if (main.date.getPersons().get(i).getIndex() == index) {
+//
+//                    // Set temporary person and turn
+//                    main.tempPerson = main.date.getPersons().get(i);
+//                }
+//            }
+            System.out.println("\nAdjusting for " + main.tempPerson.getFirstName() + "...");
 
-                    // Set temporary person and turn
-                    main.tempPerson = main.date.getPersons().get(i);
-                    System.out.println("\nAdjusting for " + main.date.getPersons().get(i).getFirstName() + "...");
-                    main.tempTurn = main.tempList.get(listView.getSelectionModel().getSelectedIndex());
-                }
-            }
+            main.tempTurn = main.tempList.get(listView.getSelectionModel().getSelectedIndex());
+
+            listView.getSelectionModel().select(-1);
 
             main.tempLabel = thisLabel;
 

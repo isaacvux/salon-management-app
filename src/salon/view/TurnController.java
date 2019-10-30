@@ -82,98 +82,98 @@ public class TurnController implements Initializable {
     public Button basicMaButton;
 
     @FXML
-    public Button deluxeMa;
+    public Button deluxeMaButton;
 
     @FXML
-    public Button OasisMa;
+    public Button oasisMaButton;
 
     @FXML
-    public Button gelMa;
+    public Button gelMaButton;
 
     @FXML
-    public Button polishNails;
+    public Button polishNailsButton;
 
     // Powder Powder Powder
     @FXML
-    public Button powderFullSet;
+    public Button powderFullSetButton;
 
     @FXML
-    public Button powderWhiteTip;
+    public Button powderWhiteTipButton;
 
     @FXML
-    public Button powderFullSetGel;
+    public Button powderFullSetGelButton;
 
     @FXML
-    public Button powderDipping;
+    public Button powderDippingButton;
 
     @FXML
-    public Button powderDippingGel;
+    public Button powderDippingGelButton;
 
     @FXML
-    public Button powderFill;
+    public Button powderFillButton;
 
     @FXML
-    public Button powderFillGel;
+    public Button powderFillGelButton;
 
     // Pedicure Pedicure Pedicure
     @FXML
-    public Button pedicureKid;
+    public Button pedicureKidButton;
 
     @FXML
-    public Button pedicurePrincess;
+    public Button pedicurePrincessButton;
 
     @FXML
-    public Button pedicureBasic;
+    public Button pedicureBasicButton;
 
     @FXML
-    public Button pedicureDeluxe;
+    public Button pedicureDeluxeButton;
 
     @FXML
-    public Button pedicureOasis;
+    public Button pedicureOasisButton;
 
     @FXML
-    public Button pedicureOnsen;
+    public Button pedicureOnsenButton;
 
     // Additional Additional Additional
     @FXML
-    public Button addOther;
+    public Button addOtherButton;
 
     @FXML
-    public Button addWhiteTip;
+    public Button addWhiteTipButton;
 
     @FXML
-    public Button addDesign;
+    public Button addDesignButton;
 
     @FXML
-    public Button addGel;
+    public Button addGelButton;
 
     @FXML
-    public Button addKidGel;
+    public Button addKidGelButton;
 
     @FXML
-    public Button addPolishToes;
+    public Button addPolishToesButton;
 
     // Waxing Waxing Waxing
     @FXML
-    public Button waxingEyebrows;
+    public Button waxingEyebrowsButton;
 
     @FXML
-    public Button waxingLips;
+    public Button waxingLipsButton;
 
     @FXML
-    public Button waxingChin;
+    public Button waxingChinButton;
 
     @FXML
-    public Button waxingSideburns;
+    public Button waxingSideburnsButton;
 
     @FXML
-    public Button waxingFullFace;
+    public Button waxingFullFaceButton;
 
     @FXML
-    public Button waxingUnderArm;
+    public Button waxingUnderArmButton;
 
     @FXML
-    public Button waxingFacial;
+    public Button waxingFacialButton;
 
     public void setMain(Main main) {
         this.main = main;
@@ -183,6 +183,40 @@ public class TurnController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         basicMaButton.setOnMouseClicked(e -> addService(main.tempTurn.basicMa, 13.0, 13.0, basicMaButton));
+        deluxeMaButton.setOnMouseClicked(e -> addService(main.tempTurn.deluxeMa, 18.0, 18.0, deluxeMaButton));
+        oasisMaButton.setOnMouseClicked(e -> addService(main.tempTurn.oasisMa, 25.0, 25.0, oasisMaButton));
+        gelMaButton.setOnMouseClicked(e -> addService(main.tempTurn.gelMa, 30.0,30.0, gelMaButton));
+        polishNailsButton.setOnMouseClicked(e -> addService(main.tempTurn.polishNails, 8.0, 8.0, polishNailsButton));
+
+        powderFullSetButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFullSet, 30.0, 30.0, powderFullSetButton));
+        powderFullSetGelButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFullSetGe, 45.0, 45.0, powderFullSetGelButton));
+        powderWhiteTipButton.setOnMouseClicked(e -> addService(main.tempTurn.powderWhiteTip, 35.0, 35.0, powderWhiteTipButton));
+        powderDippingButton.setOnMouseClicked(e -> addService(main.tempTurn.powderDipping, 35.0, 35.0, powderDippingButton ));
+        powderDippingGelButton.setOnMouseClicked(e -> addService(main.tempTurn.powderDippingGel, 40.0, 40.0, powderDippingGelButton));
+        powderFillButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFill, 20.0, 20.0, powderDippingButton));
+        powderDippingGelButton.setOnMouseClicked(e -> addService(main.tempTurn.powderDippingGel, 35.0, 35.0, powderDippingGelButton));
+
+        pedicureBasicButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureBasic, 26.0, 25.0, pedicureBasicButton));
+        pedicureDeluxeButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureDeluxe, 36.0, 35.0, pedicureDeluxeButton));
+        pedicureOasisButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureOasis, 46.0, 45.0, pedicureOasisButton));
+        pedicureOnsenButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureOnsen, 56.0, 55.0, pedicureOnsenButton));
+        pedicureKidButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureKid, 21.0, 20.0, pedicureKidButton));
+        pedicurePrincessButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicurePrincess, 26.0, 25.0, pedicurePrincessButton));
+        addPolishToesButton.setOnMouseClicked(e -> addService(main.tempTurn.addPolishToes, 10.0, 10.0, pedicurePrincessButton));
+
+        addWhiteTipButton.setOnMouseClicked(e -> addService(main.tempTurn.addWhiteTip, 5.0, 5.0, addWhiteTipButton));
+        addDesignButton.setOnMouseClicked(e -> addService(main.tempTurn.addDesign, 5.0, 5.0, addDesignButton));
+        addGelButton.setOnMouseClicked(e -> addService(main.tempTurn.addGel, 15.0, 15.0, addGelButton));
+        addKidGelButton.setOnMouseClicked(e -> addService(main.tempTurn.addKidGel, 10.0, 10.0, addKidGelButton));
+        addOtherButton.setOnMouseClicked(e -> addService(main.tempTurn.addOther, 5.0, 5.0, addOtherButton));
+
+        waxingEyebrowsButton.setOnMouseClicked(e -> addService(main.tempTurn.waxingEyebrows, 8.0, 8.0, waxingEyebrowsButton));
+        waxingLipsButton.setOnMouseClicked(e -> addService(main.tempTurn.waxingLips, 7.0, 7.0, waxingLipsButton));
+        waxingChinButton.setOnMouseClicked(e -> addService(main.tempTurn.waxingChin, 10.0, 10.0, waxingChinButton));
+        waxingSideburnsButton.setOnMouseClicked(e -> addService(main.tempTurn.waxingSideburns, 15.0, 15.0, waxingSideburnsButton));
+        waxingUnderArmButton.setOnMouseClicked(e -> addService(main.tempTurn.waxingUnderArm, 25.0, 25.0, waxingUnderArmButton));
+        waxingFullFaceButton.setOnMouseClicked(e -> addService(main.tempTurn.waxingFullFace, 35.0, 35.0, waxingFullFaceButton));
+        waxingFacialButton.setOnMouseClicked(e -> addService(main.tempTurn.waxingFacial, 55.0, 55.0, waxingFacialButton));
 
         serviceTextField.setOnMouseClicked(e -> serviceTextField.selectAll());
         serviceTextField.setOnKeyTyped(e -> handleServiceTextfield());
@@ -313,12 +347,50 @@ public class TurnController implements Initializable {
         }
         else {
 //            button.setStyle("-fx-background-color: rgb(17,178,235)");
-            button.setStyle("-fx-background-color: rgb(81,187,169)");
+            button.setStyle("-fx-background-color: rgb(50,50,50); -fx-text-fill: white");
         }
     }
 
+//    ********************
+//    * check this out
+//    ********************
+
     public void updateServiceButtonColor() {
         changeServiceButtonsColor(main.tempTurn.basicMa, basicMaButton);
+        changeServiceButtonsColor(main.tempTurn.deluxeMa, deluxeMaButton);
+        changeServiceButtonsColor(main.tempTurn.oasisMa, oasisMaButton);
+        changeServiceButtonsColor(main.tempTurn.gelMa, gelMaButton);
+        changeServiceButtonsColor(main.tempTurn.polishNails, polishNailsButton);
+
+        changeServiceButtonsColor(main.tempTurn.powderFullSet, powderFullSetButton);
+        changeServiceButtonsColor(main.tempTurn.powderFullSetGe, powderFullSetGelButton);
+        changeServiceButtonsColor(main.tempTurn.powderWhiteTip, powderWhiteTipButton);
+        changeServiceButtonsColor(main.tempTurn.powderDipping, powderDippingButton);
+        changeServiceButtonsColor(main.tempTurn.powderDippingGel, powderDippingGelButton);
+        changeServiceButtonsColor(main.tempTurn.powderFill, powderFillButton);
+        changeServiceButtonsColor(main.tempTurn.powderFillGel, powderFullSetGelButton);
+
+        changeServiceButtonsColor(main.tempTurn.pedicureBasic, pedicureBasicButton);
+        changeServiceButtonsColor(main.tempTurn.pedicureDeluxe, pedicureDeluxeButton);
+        changeServiceButtonsColor(main.tempTurn.pedicureOasis, pedicureOasisButton);
+        changeServiceButtonsColor(main.tempTurn.pedicureOnsen, pedicureOnsenButton);
+        changeServiceButtonsColor(main.tempTurn.pedicureKid, pedicureKidButton);
+        changeServiceButtonsColor(main.tempTurn.pedicurePrincess, pedicurePrincessButton);
+
+        changeServiceButtonsColor(main.tempTurn.addOther, addOtherButton);
+        changeServiceButtonsColor(main.tempTurn.addKidGel, addKidGelButton);
+        changeServiceButtonsColor(main.tempTurn.addGel, addGelButton);
+        changeServiceButtonsColor(main.tempTurn.addDesign, addDesignButton);
+        changeServiceButtonsColor(main.tempTurn.addWhiteTip, addWhiteTipButton);
+        changeServiceButtonsColor(main.tempTurn.addPolishToes, addPolishToesButton);
+
+        changeServiceButtonsColor(main.tempTurn.waxingLips, waxingLipsButton);
+        changeServiceButtonsColor(main.tempTurn.waxingChin, waxingChinButton);
+        changeServiceButtonsColor(main.tempTurn.waxingEyebrows, waxingEyebrowsButton);
+        changeServiceButtonsColor(main.tempTurn.waxingSideburns, waxingSideburnsButton);
+        changeServiceButtonsColor(main.tempTurn.waxingFullFace, waxingFullFaceButton);
+        changeServiceButtonsColor(main.tempTurn.waxingUnderArm, waxingUnderArmButton);
+        changeServiceButtonsColor(main.tempTurn.waxingFacial, waxingFacialButton);
     }
 
     public void updatePaymentTextFieldColor() {

@@ -57,37 +57,37 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="powderFullSet" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$30 Full Set" GridPane.rowIndex="1">
+            <Button fx:id="powderFullSetButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$30 Full Set" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="powderFullSetGel" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$45 Full Set + Gel" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
+            <Button fx:id="powderFullSetGelButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$45 Full Set + Gel" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="powderWhiteTip" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$35 White Tip" GridPane.rowIndex="3">
+            <Button fx:id="powderWhiteTipButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$35 White Tip" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="powderDipping" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$35 Dipping" GridPane.rowIndex="4">
+            <Button fx:id="powderDippingButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$35 Dipping" GridPane.rowIndex="4">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="powderDippingGel" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$40 Dipping  + Gel" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="5">
+            <Button fx:id="powderDippingGelButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$40 Dipping  + Gel" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="5">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="powderFill" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$20 Fill" GridPane.rowIndex="6">
+            <Button fx:id="powderFillButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$20 Fill" GridPane.rowIndex="6">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="powderFillGel" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$35 Fill + Gel" GridPane.rowIndex="7">
+            <Button fx:id="powderFillGelButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$35 Fill + Gel" GridPane.rowIndex="7">
                <font>
                   <Font size="18.0" />
                </font>
@@ -97,117 +97,117 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="OasisMa" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$25 Oasis" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="oasisMaButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$25 Oasis" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="deluxeMa" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$18 Deluxe" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="deluxeMaButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$18 Deluxe" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="gelMa" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$30 Gel" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button fx:id="gelMaButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$30 Gel" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="polishNails" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$8 Polish Nails" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Button fx:id="polishNailsButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$8 Polish Nails" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="pedicureBasic" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$26 Basic" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="pedicureBasicButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$26 Basic" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="pedicureDeluxe" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$36 Deluxe" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="pedicureDeluxeButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$36 Deluxe" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="pedicureOasis" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$46 Oasis Deluxe" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button fx:id="pedicureOasisButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$46 Oasis Deluxe" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="pedicureOnsen" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$56 Onsen" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Button fx:id="pedicureOnsenButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$56 Onsen" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="pedicureKid" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$21 Kid" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Button fx:id="pedicureKidButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$21 Kid" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="pedicurePrincess" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$26 Princess" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <Button fx:id="pedicurePrincessButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$26 Princess" GridPane.columnIndex="2" GridPane.rowIndex="6">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="addPolishToes" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$10 Polish Toes" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <Button fx:id="addPolishToesButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$10 Polish Toes" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="addWhiteTip" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$5 White Tip" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button fx:id="addWhiteTipButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$5 White Tip" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="addDesign" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$5 Design" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button fx:id="addDesignButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$5 Design" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="addGel" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$15 Gel" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button fx:id="addGelButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$15 Gel" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="addKidGel" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$10 Kid Gel" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button fx:id="addKidGelButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$10 Kid Gel" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="addOther" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$5 Other" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <Button fx:id="addOtherButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$5 Other" GridPane.columnIndex="3" GridPane.rowIndex="5">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="waxingEyebrows" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$8 Eyebrows" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <Button fx:id="waxingEyebrowsButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$8 Eyebrows" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="waxingLips" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$7 Lips" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <Button fx:id="waxingLipsButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$7 Lips" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="waxingChin" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$10 Chin" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <Button fx:id="waxingChinButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$10 Chin" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="waxingSideburns" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$15 Sideburns" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <Button fx:id="waxingSideburnsButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$15 Sideburns" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="waxingUnderArm" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$25 Under Arm" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
+            <Button fx:id="waxingUnderArmButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$25 Under Arm" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="5">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="waxingFullFace" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$35 Full Face" GridPane.columnIndex="4" GridPane.rowIndex="6">
+            <Button fx:id="waxingFullFaceButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$35 Full Face" GridPane.columnIndex="4" GridPane.rowIndex="6">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="waxingFacial" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$55 Facial" GridPane.columnIndex="4" GridPane.rowIndex="7">
+            <Button fx:id="waxingFacialButton" mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="\$55 Facial" GridPane.columnIndex="4" GridPane.rowIndex="7">
                <font>
                   <Font size="18.0" />
                </font>

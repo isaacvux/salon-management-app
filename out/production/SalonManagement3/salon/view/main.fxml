@@ -5,6 +5,8 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -14,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="salon.view.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="salon.view.Controller">
    <center>
       <GridPane alignment="CENTER" gridLinesVisible="true" BorderPane.alignment="BOTTOM_CENTER">
         <columnConstraints>
@@ -26,12 +28,12 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="194.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="374.0" minHeight="10.0" prefHeight="230.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="273.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="77.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="230.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
@@ -47,7 +49,7 @@
             </Label>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ComboBox fx:id="comboBox_0" prefHeight="50.0" prefWidth="120.0" promptText="Name" />
+                  <ComboBox fx:id="comboBox_0" prefHeight="78.0" prefWidth="120.0" promptText="Name" />
                   <Button fx:id="addButton_0" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
                      <font>
                         <Font name="System Bold" size="18.0" />
@@ -92,15 +94,15 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <children>
-                  <ListView fx:id="listView_2b" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="listView_2b" prefHeight="101.0" prefWidth="239.0" />
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <children>
-                  <ListView fx:id="listView_3b" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="listView_3b" prefHeight="96.0" prefWidth="221.0" />
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <children>
-                  <ListView fx:id="listView_4b" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="listView_4b" prefHeight="85.0" prefWidth="207.0" />
                </children></HBox>
             <ListView fx:id="listView_0b" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
             <ListView fx:id="listView_1b" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -221,14 +223,19 @@
       </GridPane>
    </center>
    <right>
-      <VBox prefHeight="800.0" prefWidth="145.0" BorderPane.alignment="CENTER" />
+      <VBox prefHeight="800.0" prefWidth="145.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea prefHeight="786.0" prefWidth="225.0" />
+         </children></VBox>
    </right>
    <left>
       <VBox prefHeight="800.0" prefWidth="50.0" BorderPane.alignment="CENTER">
          <children>
-            <Region prefHeight="500.0" prefWidth="50.0" />
+            <Region prefHeight="139.0" prefWidth="50.0" />
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
             <Button fx:id="historyButton" mnemonicParsing="false" onAction="#handleHistoryButton" prefHeight="150.0" prefWidth="50.0" text="His" />
             <Button fx:id="printButton" mnemonicParsing="false" onAction="#handlePrintButton" prefHeight="150.0" prefWidth="50.0" text="Print" />
+            <Button fx:id="preferencesButton" mnemonicParsing="false" onAction="#handlePreferencesButton" prefHeight="87.0" prefWidth="50.0" text="Settings" />
          </children>
       </VBox>
    </left>

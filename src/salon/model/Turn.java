@@ -19,6 +19,70 @@ public class Turn {
 
     public BooleanWrapper basicMa;
 
+    public BooleanWrapper deluxeMa;
+
+    public BooleanWrapper oasisMa;
+
+    public BooleanWrapper gelMa;
+
+    public BooleanWrapper polishNails;
+
+    // Powder Powder Powder
+    public BooleanWrapper powderFullSet;
+
+    public BooleanWrapper powderWhiteTip;
+
+    public BooleanWrapper powderFullSetGe;
+
+    public BooleanWrapper powderDipping;
+
+    public BooleanWrapper powderDippingGel;
+
+    public BooleanWrapper powderFill;
+
+    public BooleanWrapper powderFillGel;
+
+    // Pedicure Pedicure Pedicure
+    public BooleanWrapper pedicureKid;
+
+    public BooleanWrapper pedicurePrincess;
+
+    public BooleanWrapper pedicureBasic;
+
+    public BooleanWrapper pedicureDeluxe;
+
+    public BooleanWrapper pedicureOasis;
+
+    public BooleanWrapper pedicureOnsen;
+
+    // Additional Additional Additional
+    public BooleanWrapper addOther;
+
+    public BooleanWrapper addWhiteTip;
+
+    public BooleanWrapper addDesign;
+
+    public BooleanWrapper addGel;
+
+    public BooleanWrapper addKidGel;
+
+    public BooleanWrapper addPolishToes;
+
+    // Waxing Waxing Waxing
+    public BooleanWrapper waxingEyebrows;
+
+    public BooleanWrapper waxingLips;
+
+    public BooleanWrapper waxingChin;
+
+    public BooleanWrapper waxingSideburns;
+
+    public BooleanWrapper waxingFullFace;
+
+    public BooleanWrapper waxingUnderArm;
+
+    public BooleanWrapper waxingFacial;
+
     private ArrayList<BooleanWrapper> doneServices;
 
     public Turn(){
@@ -35,8 +99,106 @@ public class Turn {
 
         this.basicMa = new BooleanWrapper(false);
 
+        this.deluxeMa = new BooleanWrapper(false);
+
+        this.oasisMa = new BooleanWrapper(false);
+
+        this.gelMa = new BooleanWrapper(false);
+
+        this.polishNails = new BooleanWrapper(false);
+
+        // Powder Powder Powder
+        this.powderFullSet = new BooleanWrapper(false);
+
+        this.powderWhiteTip = new BooleanWrapper(false);
+
+        this.powderFullSetGe = new BooleanWrapper(false);
+
+        this.powderDipping = new BooleanWrapper(false);
+
+        this.powderDippingGel = new BooleanWrapper(false);
+
+        this.powderFill = new BooleanWrapper(false);
+
+        this.powderFillGel = new BooleanWrapper(false);
+
+        // Pedicure Pedicure Pedicure
+        this.pedicureKid = new BooleanWrapper(false);
+
+        this.pedicurePrincess = new BooleanWrapper(false);
+
+        this.pedicureBasic = new BooleanWrapper(false);
+
+        this.pedicureDeluxe = new BooleanWrapper(false);
+
+        this.pedicureOasis = new BooleanWrapper(false);
+
+        this.pedicureOnsen = new BooleanWrapper(false);
+
+        // Additional Additional Additional
+        this.addOther = new BooleanWrapper(false);
+
+        this.addWhiteTip = new BooleanWrapper(false);
+
+        this.addDesign = new BooleanWrapper(false);
+
+        this.addGel = new BooleanWrapper(false);
+
+        this.addKidGel = new BooleanWrapper(false);
+
+        this.addPolishToes = new BooleanWrapper(false);
+
+        // Waxing Waxing Waxing
+        this.waxingEyebrows = new BooleanWrapper(false);
+
+        this.waxingLips = new BooleanWrapper(false);
+
+        this.waxingChin = new BooleanWrapper(false);
+
+        this.waxingSideburns = new BooleanWrapper(false);
+
+        this.waxingFullFace = new BooleanWrapper(false);
+
+        this.waxingUnderArm = new BooleanWrapper(false);
+
+        this.waxingFacial = new BooleanWrapper(false);
+
         doneServices = new ArrayList<>();
         doneServices.add(basicMa);
+        doneServices.add(deluxeMa);
+        doneServices.add(oasisMa);
+        doneServices.add(gelMa);
+        doneServices.add(polishNails);
+
+        doneServices.add(powderFullSet);
+        doneServices.add(powderFullSetGe);
+        doneServices.add(powderWhiteTip);
+        doneServices.add(powderDipping);
+        doneServices.add(powderDippingGel);
+        doneServices.add(powderFill);
+        doneServices.add(powderFillGel);
+
+        doneServices.add(pedicureBasic);
+        doneServices.add(pedicureDeluxe);
+        doneServices.add(pedicureOasis);
+        doneServices.add(pedicureKid);
+        doneServices.add(pedicurePrincess);
+        doneServices.add(pedicureOnsen);
+
+        doneServices.add(addOther);
+        doneServices.add(addWhiteTip);
+        doneServices.add(addDesign);
+        doneServices.add(addGel);
+        doneServices.add(addKidGel);
+        doneServices.add(addPolishToes);
+
+        doneServices.add(waxingLips);
+        doneServices.add(waxingChin);
+        doneServices.add(waxingSideburns);
+        doneServices.add(waxingFullFace);
+        doneServices.add(waxingUnderArm);
+        doneServices.add(waxingFacial);
+        doneServices.add(waxingEyebrows);
     }
 
     public double getService() {

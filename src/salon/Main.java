@@ -52,6 +52,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         fileDirectory = "/Users/isaacvu/Desktop/";
+//        fileDirectory = "C:\Users\oasis\OneDrive\Desktop\";
 
         tempLocalDate = LocalDate.now();
 
