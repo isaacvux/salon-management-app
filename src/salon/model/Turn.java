@@ -17,6 +17,13 @@ public class Turn {
 
     private double off;
 
+    public BooleanWrapper payByCard;
+    public BooleanWrapper payByCash;
+    public BooleanWrapper payByGift;
+    public BooleanWrapper payByCheck;
+
+    public BooleanWrapper hasDiscount;
+
     public BooleanWrapper basicMa;
 
     public BooleanWrapper deluxeMa;
@@ -97,6 +104,14 @@ public class Turn {
 
         this.off = 0.0;
 
+        payByCard = new BooleanWrapper(false);
+        payByCash = new BooleanWrapper(false);
+        payByGift = new BooleanWrapper(false);
+        payByCheck = new BooleanWrapper(false);
+
+        hasDiscount = new BooleanWrapper(false);
+
+        // Manicure Manicure Manicure
         this.basicMa = new BooleanWrapper(false);
 
         this.deluxeMa = new BooleanWrapper(false);

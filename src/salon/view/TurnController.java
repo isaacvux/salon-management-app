@@ -228,23 +228,23 @@ public class TurnController implements Initializable {
         tipTextField.setOnKeyTyped(e -> handleTipTextfield());
 
 //        cardButton.setStyle("-fx-background-color: rgb(78,169,112)");
-        cardButton.setOnMouseClicked(e -> handleCardButton());
+//        cardButton.setOnMouseClicked(e -> handleCardButton());
         cardTextField.setOnMouseClicked(e -> cardTextField.selectAll());
-        cardTextField.setOnKeyTyped(e -> handleCardTextField());
+//        cardTextField.setOnKeyTyped(e -> handleCardTextField());
 
 //        cashButton.setStyle("-fx-background-color: rgb(62,139,195)");
-        cashButton.setOnMouseClicked(e -> handleCashButton());
+//        cashButton.setOnMouseClicked(e -> handleCashButton());
         cashTextField.setOnMouseClicked(e -> cashTextField.selectAll());
-        cashTextField.setOnKeyTyped(e -> handleCashTextField());
+//        cashTextField.setOnKeyTyped(e -> handleCashTextField());
 
 //        giftButton.setStyle("-fx-background-color: rgb(241,175,73)");
 
 //        checkButton.setStyle("-fx-background-color: rgb(177,91,46)");
 
 //        offButton.setStyle("-fx-background-color: rgb(233,87,68)");
-        offButton.setOnMouseClicked(e -> handleOffButton());
+//        offButton.setOnMouseClicked(e -> handleOffButton());
         offTextField.setOnMouseClicked(e -> offTextField.selectAll());
-        offTextField.setOnKeyTyped(e -> handleOffTextField());
+//        offTextField.setOnKeyTyped(e -> handleOffTextField());
     }
 
     public void addService(BooleanWrapper buttonIsPressed, double thisService, double thisBase, Button button) {
@@ -284,50 +284,6 @@ public class TurnController implements Initializable {
 //        updateTextField();
     }
 
-    public void handleCardButton() {
-        main.tempTurn.setCard(main.tempTurn.getService() - main.tempTurn.getCash()
-                - main.tempTurn.getGift() - main.tempTurn.getCheck());
-
-        cardTextField.setEditable(true);
-        updateTextField();
-        updatePaymentTextFieldColor();
-    }
-
-    public void handleCardTextField() {
-        main.tempTurn.setCard(Double.parseDouble(cardTextField.getText()));
-    }
-
-    public void handleCashButton() {
-        main.tempTurn.setCash(main.tempTurn.getService() - main.tempTurn.getCard()
-                - main.tempTurn.getGift() - main.tempTurn.getCheck());
-        cashTextField.setEditable(true);
-        updateTextField();
-        updatePaymentTextFieldColor();
-    }
-
-    public void handleCashTextField() {
-        main.tempTurn.setCash(Double.parseDouble(cashTextField.getText()));
-    }
-
-    public void handleOffButton() {
-        main.tempTurn.setOff(5.0);
-        main.tempTurn.setBase(main.tempTurn.getBase() - main.tempTurn.getOff());
-        main.tempTurn.setService(main.tempTurn.getService() - 15.0);
-
-        offTextField.setEditable(true);
-
-        handleCardButton();
-
-        updateTextField();
-        updatePaymentTextFieldColor();
-    }
-
-    public void handleOffTextField() {
-        main.tempTurn.setOff(Double.parseDouble(offTextField.getText()));
-
-        updatePaymentTextFieldColor();
-    }
-
     public void updateTextField() {
         serviceTextField.setText("" + main.tempTurn.getService());
         baseTextField.setText("" + main.tempTurn.getBase());
@@ -351,9 +307,22 @@ public class TurnController implements Initializable {
         }
     }
 
-//    ********************
-//    * check this out
-//    ********************
+    public void handlePaymentMethodButton(BooleanWrapper buttonIsPressed, Button button, double value){
+        if(buttonIsPressed.getFlag() == false) {
+            buttonIsPressed.setFlag(true);
+
+
+            button.setStyle("-fx-background-color: rgb(50,50,50); -fx-text-fill: white");
+        }
+        else {
+            buttonIsPressed.setFlag(false);
+
+
+            button.setStyle("-fx: default");
+        }
+        main.writeInformation(main.tempLocalDate);
+        updateTextField();
+    }
 
     public void updateServiceButtonColor() {
         changeServiceButtonsColor(main.tempTurn.basicMa, basicMaButton);
