@@ -14,9 +14,15 @@
    <bottom>
       <HBox prefHeight="39.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Region prefHeight="39.0" prefWidth="461.0" />
-            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancelButton" text="Cancel" />
-            <Button fx:id="printButton" disable="true" mnemonicParsing="false" text="Print to file" />
+            <Region prefHeight="39.0" prefWidth="418.0" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancelButton" text="Cancel">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="printButton" disable="true" mnemonicParsing="false" onAction="#handlePrintButton" text="Print to file">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
          </children>
       </HBox>
    </bottom>
@@ -25,20 +31,27 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label prefHeight="37.0" prefWidth="243.0" text="Select a day in that 2 week:">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <DatePicker fx:id="datePicker" prefHeight="38.0" prefWidth="257.0" />
+                  <DatePicker fx:id="datePicker" prefHeight="55.0" prefWidth="265.0" promptText="Select a date within that two weeks" />
                </children>
             </HBox>
-            <Label fx:id="titleLabel" prefHeight="86.0" prefWidth="509.0" text="Label" />
+            <Label fx:id="titleLabel" prefHeight="86.0" prefWidth="609.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="askingLabel" prefHeight="40.0" prefWidth="382.0" text="Label" />
-                  <TextField fx:id="reasonTextField" disable="true" />
-                  <Button fx:id="okButton" disable="true" mnemonicParsing="false" text="OK" />
+                  <Label fx:id="askingLabel" prefHeight="40.0" prefWidth="382.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <TextField fx:id="reasonTextField" prefHeight="35.0" prefWidth="233.0" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <Button fx:id="okButton" mnemonicParsing="false" onAction="#handleOkButton" prefHeight="35.0" prefWidth="138.0" text="OK" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
                </children>
             </HBox>
          </children>

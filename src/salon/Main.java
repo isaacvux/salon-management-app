@@ -259,7 +259,53 @@ public class Main extends Application {
 
             turn.setOff(Double.parseDouble(reader.readLine()));
 
-            turn.setBasicMa(new BooleanWrapper(Boolean.parseBoolean(reader.readLine())));
+            turn.payByCard.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.payByCash.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.payByGift.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.payByCheck.setFlag(Boolean.parseBoolean(reader.readLine()));
+
+            turn.hasDiscount.setFlag(Boolean.parseBoolean(reader.readLine()));
+
+            // Manicure
+            turn.basicMa.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.deluxeMa.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.oasisMa.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.gelMa.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.polishNails.setFlag(Boolean.parseBoolean(reader.readLine()));
+
+            // Powder
+            turn.powderFullSet.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.powderWhiteTip.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.powderFullSetGe.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.powderDipping.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.powderDippingGel.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.powderFill.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.powderFillGel.setFlag(Boolean.parseBoolean(reader.readLine()));
+
+            // Pedicure
+            turn.pedicureKid.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.pedicurePrincess.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.pedicureBasic.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.pedicureDeluxe.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.pedicureOasis.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.pedicureOnsen.setFlag(Boolean.parseBoolean(reader.readLine()));
+
+            // Addition
+            turn.addOther.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.addWhiteTip.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.addDesign.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.addGel.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.addKidGel.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.addPolishToes.setFlag(Boolean.parseBoolean(reader.readLine()));
+
+            // Waxing
+            turn.waxingEyebrows.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.waxingLips.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.waxingChin.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.waxingSideburns.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.waxingFullFace.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.waxingUnderArm.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.waxingFacial.setFlag(Boolean.parseBoolean(reader.readLine()));
 
             list.add(turn);
         } catch (IOException ex) {
@@ -336,8 +382,92 @@ public class Main extends Application {
             writer.write("" + turn.getOff());
             writer.write("\n");
 
-            writer.write("" + turn.getBasicMa().getFlag());
-//            writer.write("\n");
+            // payment methods
+            writer.write("" + turn.payByCard.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.payByCash.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.payByGift.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.payByCheck.getFlag());
+            writer.write("\n");
+
+            // off
+            writer.write("" + turn.hasDiscount.getFlag());
+            writer.write("\n");
+
+            // manicure
+            writer.write("" + turn.basicMa.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.deluxeMa.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.oasisMa.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.gelMa.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.polishNails.getFlag());
+            writer.write("\n");
+
+            // Powder
+            writer.write("" + turn.powderFullSet.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.powderWhiteTip.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.powderFillGel.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.powderDipping.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.powderDippingGel.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.powderFill.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.powderFillGel.getFlag());
+            writer.write("\n");
+
+            // Pedicure
+            writer.write("" + turn.pedicureKid.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.pedicurePrincess.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.pedicureBasic.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.pedicureDeluxe.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.pedicureOasis.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.pedicureOnsen.getFlag());
+            writer.write("\n");
+
+            // Addition
+            writer.write("" + turn.addOther.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.addWhiteTip.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.addDesign.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.addGel.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.addKidGel.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.addPolishToes.getFlag());
+            writer.write("\n");
+
+            // Waxing
+            writer.write("" + turn.waxingEyebrows.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.waxingLips.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.waxingChin.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.waxingSideburns.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.waxingFullFace.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.waxingUnderArm.getFlag());
+            writer.write("\n");
+            writer.write("" + turn.waxingFacial.getFlag());
+//            writer.write("\n"); // don't put a new line at the end
+
 
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -416,28 +546,10 @@ public class Main extends Application {
         }
     }
 
-    public void resetDoneServices() {
-        for(int i = 0; i < tempTurn.getDoneServices().size(); i++) {
-            tempTurn.getDoneServices().get(i).setFlag(false);
+
+    public void resetServices() {
+        for(int i = 0; i < tempTurn.getServices().size(); i++) {
+            tempTurn.getServices().get(i).setFlag(false);
         }
     }
-
-//    public String getFilePath() {
-//        Preferences prefs = Preferences.userNodeForPackage(Main.class);
-//        String filePath = prefs.get("filePath", null);
-//        if (filePath != null) {
-//            return filePath;
-//        } else {
-//            return null;
-//        }
-//    }
-//
-//    public void setFilePath(File file) {
-//        Preferences prefs = Preferences.userNodeForPackage(Main.class);
-//        if (file != null) {
-//            prefs.put("filePath", file.getPath());
-//        } else {
-//            prefs.remove("filePath");
-//        }
-//    }
 }

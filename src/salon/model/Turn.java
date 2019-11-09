@@ -24,6 +24,7 @@ public class Turn {
 
     public BooleanWrapper hasDiscount;
 
+    // Manicure
     public BooleanWrapper basicMa;
 
     public BooleanWrapper deluxeMa;
@@ -90,7 +91,7 @@ public class Turn {
 
     public BooleanWrapper waxingFacial;
 
-    private ArrayList<BooleanWrapper> doneServices;
+    private ArrayList<BooleanWrapper> services;
 
     public Turn(){
         this.service = 0.0;
@@ -178,42 +179,42 @@ public class Turn {
 
         this.waxingFacial = new BooleanWrapper(false);
 
-        doneServices = new ArrayList<>();
-        doneServices.add(basicMa);
-        doneServices.add(deluxeMa);
-        doneServices.add(oasisMa);
-        doneServices.add(gelMa);
-        doneServices.add(polishNails);
+        services = new ArrayList<>();
+        services.add(basicMa);
+        services.add(deluxeMa);
+        services.add(oasisMa);
+        services.add(gelMa);
+        services.add(polishNails);
 
-        doneServices.add(powderFullSet);
-        doneServices.add(powderFullSetGe);
-        doneServices.add(powderWhiteTip);
-        doneServices.add(powderDipping);
-        doneServices.add(powderDippingGel);
-        doneServices.add(powderFill);
-        doneServices.add(powderFillGel);
+        services.add(powderFullSet);
+        services.add(powderFullSetGe);
+        services.add(powderWhiteTip);
+        services.add(powderDipping);
+        services.add(powderDippingGel);
+        services.add(powderFill);
+        services.add(powderFillGel);
 
-        doneServices.add(pedicureBasic);
-        doneServices.add(pedicureDeluxe);
-        doneServices.add(pedicureOasis);
-        doneServices.add(pedicureKid);
-        doneServices.add(pedicurePrincess);
-        doneServices.add(pedicureOnsen);
+        services.add(pedicureBasic);
+        services.add(pedicureDeluxe);
+        services.add(pedicureOasis);
+        services.add(pedicureKid);
+        services.add(pedicurePrincess);
+        services.add(pedicureOnsen);
 
-        doneServices.add(addOther);
-        doneServices.add(addWhiteTip);
-        doneServices.add(addDesign);
-        doneServices.add(addGel);
-        doneServices.add(addKidGel);
-        doneServices.add(addPolishToes);
+        services.add(addOther);
+        services.add(addWhiteTip);
+        services.add(addDesign);
+        services.add(addGel);
+        services.add(addKidGel);
+        services.add(addPolishToes);
 
-        doneServices.add(waxingLips);
-        doneServices.add(waxingChin);
-        doneServices.add(waxingSideburns);
-        doneServices.add(waxingFullFace);
-        doneServices.add(waxingUnderArm);
-        doneServices.add(waxingFacial);
-        doneServices.add(waxingEyebrows);
+        services.add(waxingLips);
+        services.add(waxingChin);
+        services.add(waxingSideburns);
+        services.add(waxingFullFace);
+        services.add(waxingUnderArm);
+        services.add(waxingFacial);
+        services.add(waxingEyebrows);
     }
 
     public double getService() {
@@ -288,12 +289,12 @@ public class Turn {
         this.basicMa = basicMa;
     }
 
-    public ArrayList<BooleanWrapper> getDoneServices() {
-        return doneServices;
+    public ArrayList<BooleanWrapper> getServices() {
+        return services;
     }
 
-    public void setDoneServices(ArrayList<BooleanWrapper> doneServices) {
-        this.doneServices = doneServices;
+    public void setServices(ArrayList<BooleanWrapper> services) {
+        this.services = services;
     }
 
     @Override

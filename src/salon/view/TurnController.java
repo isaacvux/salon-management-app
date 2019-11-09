@@ -1,20 +1,13 @@
 package salon.view;
 
-import javafx.css.Selector;
-import javafx.css.Style;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.layout.Background;
-import javafx.scene.paint.Color;
 import salon.Main;
-import salon.model.Person;
-import salon.model.Turn;
 import salon.util.BooleanWrapper;
-import salon.util.DoubleWrapper;
-import salon.util.IntWrapper;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class TurnController implements Initializable {
@@ -175,12 +168,29 @@ public class TurnController implements Initializable {
     @FXML
     public Button waxingFacialButton;
 
+    private ArrayList<Button> serviceButtons = new ArrayList<>();
+
+    private ArrayList<Button> paymentMethodButtons = new ArrayList<>();
+
     public void setMain(Main main) {
         this.main = main;
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        cardButton.setOnMouseClicked(e -> handleCardButton());
+        cashButton.setOnMouseClicked(e -> handleCashButton());
+        giftButton.setOnMouseClicked(e -> handleGiftButton());
+        checkButton.setOnMouseClicked(e -> handleCheckButton());
+
+        offButton.setOnMouseClicked(e -> handleOffButton());
+
+        cardTextField.setOnKeyTyped(e -> main.tempTurn.setCard(Double.parseDouble(cardTextField.getText())));
+        cashTextField.setOnKeyTyped(e -> main.tempTurn.setCash(Double.parseDouble(cashTextField.getText())));
+        giftTextField.setOnKeyTyped(e -> main.tempTurn.setGift(Double.parseDouble(giftTextField.getText())));
+        checkTextField.setOnKeyTyped(e -> main.tempTurn.setCheck(Double.parseDouble(checkTextField.getText())));
+
+        offTextField.setOnKeyTyped(e -> handleOffTextField());
 
         basicMaButton.setOnMouseClicked(e -> addService(main.tempTurn.basicMa, 13.0, 13.0, basicMaButton));
         deluxeMaButton.setOnMouseClicked(e -> addService(main.tempTurn.deluxeMa, 18.0, 18.0, deluxeMaButton));
@@ -193,8 +203,8 @@ public class TurnController implements Initializable {
         powderWhiteTipButton.setOnMouseClicked(e -> addService(main.tempTurn.powderWhiteTip, 35.0, 35.0, powderWhiteTipButton));
         powderDippingButton.setOnMouseClicked(e -> addService(main.tempTurn.powderDipping, 35.0, 35.0, powderDippingButton ));
         powderDippingGelButton.setOnMouseClicked(e -> addService(main.tempTurn.powderDippingGel, 40.0, 40.0, powderDippingGelButton));
-        powderFillButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFill, 20.0, 20.0, powderDippingButton));
-        powderDippingGelButton.setOnMouseClicked(e -> addService(main.tempTurn.powderDippingGel, 35.0, 35.0, powderDippingGelButton));
+        powderFillButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFill, 20.0, 20.0, powderFillButton));
+        powderFillGelButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFillGel, 35.0, 35.0, powderFillGelButton));
 
         pedicureBasicButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureBasic, 26.0, 25.0, pedicureBasicButton));
         pedicureDeluxeButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureDeluxe, 36.0, 35.0, pedicureDeluxeButton));
@@ -202,7 +212,7 @@ public class TurnController implements Initializable {
         pedicureOnsenButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureOnsen, 56.0, 55.0, pedicureOnsenButton));
         pedicureKidButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureKid, 21.0, 20.0, pedicureKidButton));
         pedicurePrincessButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicurePrincess, 26.0, 25.0, pedicurePrincessButton));
-        addPolishToesButton.setOnMouseClicked(e -> addService(main.tempTurn.addPolishToes, 10.0, 10.0, pedicurePrincessButton));
+        addPolishToesButton.setOnMouseClicked(e -> addService(main.tempTurn.addPolishToes, 10.0, 10.0, addPolishToesButton));
 
         addWhiteTipButton.setOnMouseClicked(e -> addService(main.tempTurn.addWhiteTip, 5.0, 5.0, addWhiteTipButton));
         addDesignButton.setOnMouseClicked(e -> addService(main.tempTurn.addDesign, 5.0, 5.0, addDesignButton));
@@ -222,29 +232,16 @@ public class TurnController implements Initializable {
         serviceTextField.setOnKeyTyped(e -> handleServiceTextfield());
 
         tipTextField.setOnMouseClicked(e -> {
-            serviceTextField.setText("" + main.tempTurn.getService());
-            baseTextField.setText("" + main.tempTurn.getBase());
+            setTurnTextField();
             tipTextField.selectAll();});
         tipTextField.setOnKeyTyped(e -> handleTipTextfield());
 
-//        cardButton.setStyle("-fx-background-color: rgb(78,169,112)");
-//        cardButton.setOnMouseClicked(e -> handleCardButton());
         cardTextField.setOnMouseClicked(e -> cardTextField.selectAll());
-//        cardTextField.setOnKeyTyped(e -> handleCardTextField());
-
-//        cashButton.setStyle("-fx-background-color: rgb(62,139,195)");
-//        cashButton.setOnMouseClicked(e -> handleCashButton());
         cashTextField.setOnMouseClicked(e -> cashTextField.selectAll());
-//        cashTextField.setOnKeyTyped(e -> handleCashTextField());
+        giftTextField.setOnMouseClicked(e -> cashTextField.selectAll());
+        checkTextField.setOnMouseClicked(e -> cashTextField.selectAll());
 
-//        giftButton.setStyle("-fx-background-color: rgb(241,175,73)");
-
-//        checkButton.setStyle("-fx-background-color: rgb(177,91,46)");
-
-//        offButton.setStyle("-fx-background-color: rgb(233,87,68)");
-//        offButton.setOnMouseClicked(e -> handleOffButton());
         offTextField.setOnMouseClicked(e -> offTextField.selectAll());
-//        offTextField.setOnKeyTyped(e -> handleOffTextField());
     }
 
     public void addService(BooleanWrapper buttonIsPressed, double thisService, double thisBase, Button button) {
@@ -265,8 +262,8 @@ public class TurnController implements Initializable {
 
             button.setStyle("-fx: default");
         }
-        main.writeInformation(main.tempLocalDate);
-        updateTextField();
+//        main.writeInformation(main.tempLocalDate);
+        setTurnTextField();
     }
 
     public void handleServiceTextfield() {
@@ -274,8 +271,8 @@ public class TurnController implements Initializable {
         main.tempTurn.setService(Double.parseDouble(serviceTextField.getText()));
         main.tempTurn.setBase(Double.parseDouble(serviceTextField.getText()));
 
-        main.resetDoneServices();
-        updateServiceButtonColor();
+        main.resetServices();
+        setServiceButtonStatus();
     }
 
     public void handleTipTextfield() {
@@ -284,20 +281,39 @@ public class TurnController implements Initializable {
 //        updateTextField();
     }
 
-    public void updateTextField() {
-        serviceTextField.setText("" + main.tempTurn.getService());
+    public void setTurnTextField() {
         baseTextField.setText("" + main.tempTurn.getBase());
         tipTextField.setText("" + main.tempTurn.getTip());
-
-        cardTextField.setText("" + main.tempTurn.getCard());
-        cashTextField.setText("" + main.tempTurn.getCash());
-        giftTextField.setText("" + main.tempTurn.getGift());
-        checkTextField.setText("" + main.tempTurn.getCheck());
-
         offTextField.setText("" + main.tempTurn.getOff());
+
+        if(main.tempTurn.hasDiscount.getFlag()) {
+
+            serviceTextField.setText("~" + main.tempTurn.getService());
+
+            if(main.tempTurn.payByCard.getFlag()) {
+                cardTextField.setText("~" + main.tempTurn.getCard());
+            }
+            if(main.tempTurn.payByCash.getFlag()) {
+                cashTextField.setText("~" + main.tempTurn.getCash());
+            }
+            if(main.tempTurn.payByGift.getFlag()) {
+                giftTextField.setText("~" + main.tempTurn.getGift());
+            }
+            if(main.tempTurn.payByCheck.getFlag()) {
+                checkTextField.setText("~" + main.tempTurn.getCheck());
+            }
+        }
+        else {
+            serviceTextField.setText("" + main.tempTurn.getService());
+            cardTextField.setText("" + main.tempTurn.getCard());
+            cashTextField.setText("" + main.tempTurn.getCash());
+            giftTextField.setText("" + main.tempTurn.getGift());
+            checkTextField.setText("" + main.tempTurn.getCheck());
+        }
+
     }
 
-    public void changeServiceButtonsColor(BooleanWrapper buttonIsPressed, Button button) {
+    public void changeButtonsColor(BooleanWrapper buttonIsPressed, Button button) {
         if(buttonIsPressed.getFlag() == false) {
             button.setStyle("-fx: default");
         }
@@ -307,89 +323,212 @@ public class TurnController implements Initializable {
         }
     }
 
-    public void handlePaymentMethodButton(BooleanWrapper buttonIsPressed, Button button, double value){
-        if(buttonIsPressed.getFlag() == false) {
-            buttonIsPressed.setFlag(true);
-
-
-            button.setStyle("-fx-background-color: rgb(50,50,50); -fx-text-fill: white");
+    public void handleCardButton(){
+        if(main.tempTurn.payByCard.getFlag() == false) {
+            main.tempTurn.payByCard.setFlag(true);
+            main.tempTurn.setCard(main.tempTurn.getService() - main.tempTurn.getCash() - main.tempTurn.getGift() - main.tempTurn.getCheck());
+//            cardTextField.setDisable(false);
         }
         else {
-            buttonIsPressed.setFlag(false);
-
-
-            button.setStyle("-fx: default");
+            main.tempTurn.payByCard.setFlag(false);
+            main.tempTurn.setCard(0.0);
+//            cardTextField.setDisable(true);
         }
-        main.writeInformation(main.tempLocalDate);
-        updateTextField();
+
+        setTurnTextField();
+        setPaymentTextFieldStatus();
+        setPaymentMethodButtonStatus();
+
+//        main.writeInformation(main.tempLocalDate);
     }
 
-    public void updateServiceButtonColor() {
-        changeServiceButtonsColor(main.tempTurn.basicMa, basicMaButton);
-        changeServiceButtonsColor(main.tempTurn.deluxeMa, deluxeMaButton);
-        changeServiceButtonsColor(main.tempTurn.oasisMa, oasisMaButton);
-        changeServiceButtonsColor(main.tempTurn.gelMa, gelMaButton);
-        changeServiceButtonsColor(main.tempTurn.polishNails, polishNailsButton);
+    public void handleCashButton(){
+        if(main.tempTurn.payByCash.getFlag() == false) {
+            main.tempTurn.payByCash.setFlag(true);
+            main.tempTurn.setCash(main.tempTurn.getService() - main.tempTurn.getCard() - main.tempTurn.getGift() - main.tempTurn.getCheck());
+//            cashTextField.setDisable(false);
+        }
+        else {
+            main.tempTurn.payByCash.setFlag(false);
+            main.tempTurn.setCash(0.0);
+//            cashTextField.setDisable(true);
+        }
 
-        changeServiceButtonsColor(main.tempTurn.powderFullSet, powderFullSetButton);
-        changeServiceButtonsColor(main.tempTurn.powderFullSetGe, powderFullSetGelButton);
-        changeServiceButtonsColor(main.tempTurn.powderWhiteTip, powderWhiteTipButton);
-        changeServiceButtonsColor(main.tempTurn.powderDipping, powderDippingButton);
-        changeServiceButtonsColor(main.tempTurn.powderDippingGel, powderDippingGelButton);
-        changeServiceButtonsColor(main.tempTurn.powderFill, powderFillButton);
-        changeServiceButtonsColor(main.tempTurn.powderFillGel, powderFullSetGelButton);
+        setTurnTextField();
+        setPaymentTextFieldStatus();
+        setPaymentMethodButtonStatus();
 
-        changeServiceButtonsColor(main.tempTurn.pedicureBasic, pedicureBasicButton);
-        changeServiceButtonsColor(main.tempTurn.pedicureDeluxe, pedicureDeluxeButton);
-        changeServiceButtonsColor(main.tempTurn.pedicureOasis, pedicureOasisButton);
-        changeServiceButtonsColor(main.tempTurn.pedicureOnsen, pedicureOnsenButton);
-        changeServiceButtonsColor(main.tempTurn.pedicureKid, pedicureKidButton);
-        changeServiceButtonsColor(main.tempTurn.pedicurePrincess, pedicurePrincessButton);
-
-        changeServiceButtonsColor(main.tempTurn.addOther, addOtherButton);
-        changeServiceButtonsColor(main.tempTurn.addKidGel, addKidGelButton);
-        changeServiceButtonsColor(main.tempTurn.addGel, addGelButton);
-        changeServiceButtonsColor(main.tempTurn.addDesign, addDesignButton);
-        changeServiceButtonsColor(main.tempTurn.addWhiteTip, addWhiteTipButton);
-        changeServiceButtonsColor(main.tempTurn.addPolishToes, addPolishToesButton);
-
-        changeServiceButtonsColor(main.tempTurn.waxingLips, waxingLipsButton);
-        changeServiceButtonsColor(main.tempTurn.waxingChin, waxingChinButton);
-        changeServiceButtonsColor(main.tempTurn.waxingEyebrows, waxingEyebrowsButton);
-        changeServiceButtonsColor(main.tempTurn.waxingSideburns, waxingSideburnsButton);
-        changeServiceButtonsColor(main.tempTurn.waxingFullFace, waxingFullFaceButton);
-        changeServiceButtonsColor(main.tempTurn.waxingUnderArm, waxingUnderArmButton);
-        changeServiceButtonsColor(main.tempTurn.waxingFacial, waxingFacialButton);
+//        main.writeInformation(main.tempLocalDate);
     }
 
-    public void updatePaymentTextFieldColor() {
-        if (main.tempTurn.getCard() > 0.0) {
-            cardTextField.setStyle("-fx-background-color: rgb(78,169,112)");
+    public void handleGiftButton(){
+        if(main.tempTurn.payByGift.getFlag() == false) {
+            main.tempTurn.payByGift.setFlag(true);
+            main.tempTurn.setGift(main.tempTurn.getService() - main.tempTurn.getCash() - main.tempTurn.getCard() - main.tempTurn.getCheck());
+//            giftTextField.setDisable(false);
+        }
+        else {
+            main.tempTurn.payByGift.setFlag(false);
+            main.tempTurn.setGift(0.0);
+//            giftTextField.setDisable(true);
+        }
+
+        setTurnTextField();
+        setPaymentTextFieldStatus();
+        setPaymentMethodButtonStatus();
+
+//        main.writeInformation(main.tempLocalDate);
+    }
+
+    public void handleCheckButton(){
+        if(main.tempTurn.payByCheck.getFlag() == false) {
+            main.tempTurn.payByCheck.setFlag(true);
+            main.tempTurn.setCheck(main.tempTurn.getService() - main.tempTurn.getCash() - main.tempTurn.getGift() - main.tempTurn.getCard());
+//            checkTextField.setDisable(false);
+        }
+        else {
+            main.tempTurn.payByCheck.setFlag(false);
+            main.tempTurn.setCheck(0.0);
+//            checkTextField.setDisable(true);
+        }
+
+        setTurnTextField();
+        setPaymentTextFieldStatus();
+        setPaymentMethodButtonStatus();
+
+//        main.writeInformation(main.tempLocalDate);
+    }
+
+    public void handleOffButton(){
+        if(main.tempTurn.hasDiscount.getFlag() == false) {
+            main.tempTurn.hasDiscount.setFlag(true);
+            main.tempTurn.setOff(5.0);
+            main.tempTurn.setBase(main.tempTurn.getBase() - main.tempTurn.getOff());
+
+//            offTextField.setDisable(false);
+        }
+        else {
+            main.tempTurn.hasDiscount.setFlag(false);
+            main.tempTurn.setBase(main.tempTurn.getBase() + main.tempTurn.getOff());
+            main.tempTurn.setOff(0.0);
+
+//            offTextField.setDisable(true);
+        }
+
+        setTurnTextField();
+        setPaymentTextFieldStatus();
+        setPaymentMethodButtonStatus();
+
+//        main.writeInformation(main.tempLocalDate);
+    }
+
+    public void handleOffTextField() {
+        main.tempTurn.setOff(Double.parseDouble(offTextField.getText()));
+        main.tempTurn.setBase(main.tempTurn.getBase() + 5.0 - main.tempTurn.getOff());
+        setTurnTextField();
+        setPaymentTextFieldStatus();
+    }
+
+    public void setServiceButtonStatus() {
+        changeButtonsColor(main.tempTurn.basicMa, basicMaButton);
+        changeButtonsColor(main.tempTurn.deluxeMa, deluxeMaButton);
+        changeButtonsColor(main.tempTurn.oasisMa, oasisMaButton);
+        changeButtonsColor(main.tempTurn.gelMa, gelMaButton);
+        changeButtonsColor(main.tempTurn.polishNails, polishNailsButton);
+
+        changeButtonsColor(main.tempTurn.powderFullSet, powderFullSetButton);
+        changeButtonsColor(main.tempTurn.powderFullSetGe, powderFullSetGelButton);
+        changeButtonsColor(main.tempTurn.powderWhiteTip, powderWhiteTipButton);
+        changeButtonsColor(main.tempTurn.powderDipping, powderDippingButton);
+        changeButtonsColor(main.tempTurn.powderDippingGel, powderDippingGelButton);
+        changeButtonsColor(main.tempTurn.powderFill, powderFillButton);
+        changeButtonsColor(main.tempTurn.powderFillGel, powderFullSetGelButton);
+
+        changeButtonsColor(main.tempTurn.pedicureBasic, pedicureBasicButton);
+        changeButtonsColor(main.tempTurn.pedicureDeluxe, pedicureDeluxeButton);
+        changeButtonsColor(main.tempTurn.pedicureOasis, pedicureOasisButton);
+        changeButtonsColor(main.tempTurn.pedicureOnsen, pedicureOnsenButton);
+        changeButtonsColor(main.tempTurn.pedicureKid, pedicureKidButton);
+        changeButtonsColor(main.tempTurn.pedicurePrincess, pedicurePrincessButton);
+
+        changeButtonsColor(main.tempTurn.addOther, addOtherButton);
+        changeButtonsColor(main.tempTurn.addKidGel, addKidGelButton);
+        changeButtonsColor(main.tempTurn.addGel, addGelButton);
+        changeButtonsColor(main.tempTurn.addDesign, addDesignButton);
+        changeButtonsColor(main.tempTurn.addWhiteTip, addWhiteTipButton);
+        changeButtonsColor(main.tempTurn.addPolishToes, addPolishToesButton);
+
+        changeButtonsColor(main.tempTurn.waxingLips, waxingLipsButton);
+        changeButtonsColor(main.tempTurn.waxingChin, waxingChinButton);
+        changeButtonsColor(main.tempTurn.waxingEyebrows, waxingEyebrowsButton);
+        changeButtonsColor(main.tempTurn.waxingSideburns, waxingSideburnsButton);
+        changeButtonsColor(main.tempTurn.waxingFullFace, waxingFullFaceButton);
+        changeButtonsColor(main.tempTurn.waxingUnderArm, waxingUnderArmButton);
+        changeButtonsColor(main.tempTurn.waxingFacial, waxingFacialButton);
+    }
+
+    public void setPaymentMethodButtonStatus(){
+        changeButtonsColor(main.tempTurn.payByCard, cardButton);
+        changeButtonsColor(main.tempTurn.payByCash, cashButton);
+        changeButtonsColor(main.tempTurn.payByGift, giftButton);
+        changeButtonsColor(main.tempTurn.payByCheck, checkButton);
+
+        changeButtonsColor(main.tempTurn.hasDiscount, offButton);
+    }
+
+    public void setPaymentTextFieldStatus() {
+        if(main.tempTurn.payByCard.getFlag()) {
+            cardTextField.setStyle("-fx-background-color: rgb(36,173,88)");
+            cardTextField.setDisable(false);
         }
         else {
             cardTextField.setStyle("-fx: default");
+            cardTextField.setDisable(true);
         }
 
-        if (main.tempTurn.getCash() > 0.0) {
-            cashTextField.setStyle("-fx-background-color: rgb(62,139,195)");
+        if(main.tempTurn.payByCash.getFlag()) {
+            cashTextField.setStyle("-fx-background-color: rgb(16,178,236)");
+            cashTextField.setDisable(false);
         }
         else {
             cashTextField.setStyle("-fx: default");
+            cashTextField.setDisable(true);
+        }
+
+        if(main.tempTurn.payByGift.getFlag()) {
+            giftTextField.setStyle("-fx-background-color: rgb(264,190,57)");
+            giftTextField.setDisable(false);
+        }
+        else {
+            giftTextField.setStyle("-fx: default");
+            giftTextField.setDisable(true);
+        }
+
+        if(main.tempTurn.payByCheck.getFlag()) {
+            checkTextField.setStyle("-fx-background-color: rgb(235,125,64)");
+            checkTextField.setDisable(false);
+        }
+        else {
+            checkTextField.setStyle("-fx: default");
+            checkTextField.setDisable(true);
         }
 
         //off off off
-        if (main.tempTurn.getOff() > 0.0) {
+        if(main.tempTurn.hasDiscount.getFlag()) {
             offTextField.setStyle("-fx-background-color: rgb(233,87,68)");
+            offTextField.setDisable(false);
         }
         else {
             offTextField.setStyle("-fx: default");
+            offTextField.setDisable(true);
         }
     }
 
-    public void updateTurnScene(){
-        updateTextField();
-        updateServiceButtonColor();
-        updatePaymentTextFieldColor();
+    public void setUpTurnScene(){
+        setTurnTextField();
+        setServiceButtonStatus();
+        setPaymentMethodButtonStatus();
+        setPaymentTextFieldStatus();
     }
 
     @FXML
@@ -428,10 +567,10 @@ public class TurnController implements Initializable {
 
         main.writeInformation(main.tempLocalDate);
 
-        main.controller.listView_0a.refresh();
-        main.controller.listView_0b.refresh();
-        main.controller.listView_1a.refresh();
-        main.controller.listView_1b.refresh();
+//        main.controller.listView_0a.refresh();
+//        main.controller.listView_0b.refresh();
+//        main.controller.listView_1a.refresh();
+//        main.controller.listView_1b.refresh();
 
         // Turn back to main screen
         main.primaryStage.setScene(main.mainScene);

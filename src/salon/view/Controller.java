@@ -2,20 +2,14 @@ package salon.view;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.text.Font;
 import salon.Main;
 import javafx.scene.control.*;
 import salon.model.Person;
 import salon.model.Turn;
 
-import java.io.*;
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -510,7 +504,7 @@ public class Controller implements Initializable {
 
         main.tempLabel = thisLabel;
 
-        main.turnController.updateTurnScene();
+        main.turnController.setUpTurnScene();
 
         main.primaryStage.setScene(main.turnScene);
     }
@@ -547,7 +541,7 @@ public class Controller implements Initializable {
 
             main.tempLabel = thisLabel;
 
-            main.turnController.updateTurnScene();
+            main.turnController.setUpTurnScene();
 
             main.primaryStage.setScene(main.turnScene);
         }
