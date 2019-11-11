@@ -46,12 +46,15 @@ public class Main extends Application {
     public ObservableList<Turn> tempList;
     public Turn tempTurn;
     public Label tempLabel;
+    public ListView tempListView_a;
+    public ListView tempListView_b;
+    public ListView tempListView;
 
     public Main() {}
 
     @Override
     public void start(Stage primaryStage) {
-        fileDirectory = "/Users/isaacvu/Desktop/";
+        fileDirectory = "/Users/isaacvu/Desktop/Data/";
 //        fileDirectory = "C:\Users\oasis\OneDrive\Desktop\";
 
         tempLocalDate = LocalDate.now();
@@ -133,6 +136,7 @@ public class Main extends Application {
 
         primaryStage.setScene(mainScene);
         primaryStage.show();
+//        primaryStage.setFullScreen(true);
     }
 
     public static void main(String[] args) {
@@ -275,8 +279,8 @@ public class Main extends Application {
 
             // Powder
             turn.powderFullSet.setFlag(Boolean.parseBoolean(reader.readLine()));
-            turn.powderWhiteTip.setFlag(Boolean.parseBoolean(reader.readLine()));
             turn.powderFullSetGe.setFlag(Boolean.parseBoolean(reader.readLine()));
+            turn.powderWhiteTip.setFlag(Boolean.parseBoolean(reader.readLine()));
             turn.powderDipping.setFlag(Boolean.parseBoolean(reader.readLine()));
             turn.powderDippingGel.setFlag(Boolean.parseBoolean(reader.readLine()));
             turn.powderFill.setFlag(Boolean.parseBoolean(reader.readLine()));
@@ -411,9 +415,9 @@ public class Main extends Application {
             // Powder
             writer.write("" + turn.powderFullSet.getFlag());
             writer.write("\n");
-            writer.write("" + turn.powderWhiteTip.getFlag());
+            writer.write("" + turn.powderFullSetGe.getFlag());
             writer.write("\n");
-            writer.write("" + turn.powderFillGel.getFlag());
+            writer.write("" + turn.powderWhiteTip.getFlag());
             writer.write("\n");
             writer.write("" + turn.powderDipping.getFlag());
             writer.write("\n");
@@ -499,18 +503,8 @@ public class Main extends Application {
             controller.listViews_a.get(i).setItems(null);
             controller.listViews_b.get(i).setItems(null);
             controller.infoLabels.get(i).setText("");
+            controller.infoLabels.get(i).setStyle("-fx: default");
         }
-//        controller.comboBox_0.setValue(null);
-//        controller.addButton_0.setDisable(true);
-//        controller.listView_0a.setItems(null);
-//        controller.listView_0b.setItems(null);
-//        controller.infoLabel_0.setText("");
-//
-//        controller.comboBox_1.setValue(null);
-//        controller.addButton_1.setDisable(true);
-//        controller.listView_1a.setItems(null);
-//        controller.listView_1b.setItems(null);
-//        controller.infoLabel_1.setText("");
 
         for(int i = 0; i < date.getPersons().size(); i++) {
             if(date.getPersons().get(i).getIndex() == 0) {

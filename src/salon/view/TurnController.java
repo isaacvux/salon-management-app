@@ -18,6 +18,9 @@ public class TurnController implements Initializable {
 
     // Information
     @FXML
+    public Label nameLabel;
+
+    @FXML
     public TextField serviceTextField;
 
     @FXML
@@ -198,12 +201,19 @@ public class TurnController implements Initializable {
         gelMaButton.setOnMouseClicked(e -> addService(main.tempTurn.gelMa, 30.0,30.0, gelMaButton));
         polishNailsButton.setOnMouseClicked(e -> addService(main.tempTurn.polishNails, 8.0, 8.0, polishNailsButton));
 
+        // Powder
         powderFullSetButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFullSet, 30.0, 30.0, powderFullSetButton));
+
         powderFullSetGelButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFullSetGe, 45.0, 45.0, powderFullSetGelButton));
+
         powderWhiteTipButton.setOnMouseClicked(e -> addService(main.tempTurn.powderWhiteTip, 35.0, 35.0, powderWhiteTipButton));
+
         powderDippingButton.setOnMouseClicked(e -> addService(main.tempTurn.powderDipping, 35.0, 35.0, powderDippingButton ));
+
         powderDippingGelButton.setOnMouseClicked(e -> addService(main.tempTurn.powderDippingGel, 40.0, 40.0, powderDippingGelButton));
+
         powderFillButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFill, 20.0, 20.0, powderFillButton));
+
         powderFillGelButton.setOnMouseClicked(e -> addService(main.tempTurn.powderFillGel, 35.0, 35.0, powderFillGelButton));
 
         pedicureBasicButton.setOnMouseClicked(e -> addService(main.tempTurn.pedicureBasic, 26.0, 25.0, pedicureBasicButton));
@@ -431,19 +441,31 @@ public class TurnController implements Initializable {
 
     public void setServiceButtonStatus() {
         changeButtonsColor(main.tempTurn.basicMa, basicMaButton);
+
         changeButtonsColor(main.tempTurn.deluxeMa, deluxeMaButton);
+
         changeButtonsColor(main.tempTurn.oasisMa, oasisMaButton);
+
         changeButtonsColor(main.tempTurn.gelMa, gelMaButton);
+
         changeButtonsColor(main.tempTurn.polishNails, polishNailsButton);
 
+        // Powder
         changeButtonsColor(main.tempTurn.powderFullSet, powderFullSetButton);
-        changeButtonsColor(main.tempTurn.powderFullSetGe, powderFullSetGelButton);
-        changeButtonsColor(main.tempTurn.powderWhiteTip, powderWhiteTipButton);
-        changeButtonsColor(main.tempTurn.powderDipping, powderDippingButton);
-        changeButtonsColor(main.tempTurn.powderDippingGel, powderDippingGelButton);
-        changeButtonsColor(main.tempTurn.powderFill, powderFillButton);
-        changeButtonsColor(main.tempTurn.powderFillGel, powderFullSetGelButton);
 
+        changeButtonsColor(main.tempTurn.powderFullSetGe, powderFullSetGelButton);
+
+        changeButtonsColor(main.tempTurn.powderWhiteTip, powderWhiteTipButton);
+
+        changeButtonsColor(main.tempTurn.powderDipping, powderDippingButton);
+
+        changeButtonsColor(main.tempTurn.powderDippingGel, powderDippingGelButton);
+
+        changeButtonsColor(main.tempTurn.powderFill, powderFillButton);
+
+        changeButtonsColor(main.tempTurn.powderFillGel, powderFillGelButton);
+
+        // Pedicure
         changeButtonsColor(main.tempTurn.pedicureBasic, pedicureBasicButton);
         changeButtonsColor(main.tempTurn.pedicureDeluxe, pedicureDeluxeButton);
         changeButtonsColor(main.tempTurn.pedicureOasis, pedicureOasisButton);
@@ -478,7 +500,9 @@ public class TurnController implements Initializable {
 
     public void setPaymentTextFieldStatus() {
         if(main.tempTurn.payByCard.getFlag()) {
-            cardTextField.setStyle("-fx-background-color: rgb(36,173,88)");
+            cardTextField.setStyle("-fx-background-color: rgb(16,178,236)");
+            /**/
+            System.out.println("card");
             cardTextField.setDisable(false);
         }
         else {
@@ -487,7 +511,9 @@ public class TurnController implements Initializable {
         }
 
         if(main.tempTurn.payByCash.getFlag()) {
-            cashTextField.setStyle("-fx-background-color: rgb(16,178,236)");
+            cashTextField.setStyle("-fx-background-color: rgb(36,173,88)");
+            /**/
+            System.out.println("cash");
             cashTextField.setDisable(false);
         }
         else {
@@ -497,6 +523,8 @@ public class TurnController implements Initializable {
 
         if(main.tempTurn.payByGift.getFlag()) {
             giftTextField.setStyle("-fx-background-color: rgb(264,190,57)");
+            /**/
+            System.out.println("gift");
             giftTextField.setDisable(false);
         }
         else {
@@ -506,6 +534,8 @@ public class TurnController implements Initializable {
 
         if(main.tempTurn.payByCheck.getFlag()) {
             checkTextField.setStyle("-fx-background-color: rgb(235,125,64)");
+            /**/
+            System.out.println("check");
             checkTextField.setDisable(false);
         }
         else {
@@ -516,6 +546,8 @@ public class TurnController implements Initializable {
         //off off off
         if(main.tempTurn.hasDiscount.getFlag()) {
             offTextField.setStyle("-fx-background-color: rgb(233,87,68)");
+            /**/
+            System.out.println("off");
             offTextField.setDisable(false);
         }
         else {
@@ -525,6 +557,7 @@ public class TurnController implements Initializable {
     }
 
     public void setUpTurnScene(){
+        nameLabel.setText(main.tempPerson.getFirstName());
         setTurnTextField();
         setServiceButtonStatus();
         setPaymentMethodButtonStatus();
@@ -564,6 +597,10 @@ public class TurnController implements Initializable {
         }
 
         main.controller.updateInfo();
+//        main.controller.updateListView(main.tempListView_a);
+//        main.controller.updateListView(main.tempListView_b);
+//        main.controller.updateListView(main.tempListView);
+
 
         main.writeInformation(main.tempLocalDate);
 

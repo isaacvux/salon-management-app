@@ -299,11 +299,34 @@ public class Turn {
 
     @Override
     public String toString() {
-        return base + " + " + tip;
+        return paymentMethod() + "   " + base + " + " + tip + hasDisCount();
     }
 
     public String checkPoint() {
         return "\nService: " + service + " Base: " + base + " Tip: " + tip + " Off: " + off +
                 "\nCard: " + card + " Cash: " + cash + " Gift: " + gift + " Check: " + check;
+    }
+
+    public String paymentMethod() {
+        if (payByCard.getFlag()) {
+            return "V";
+        }
+        else if (payByCash.getFlag()) {
+            return "C";
+        }
+        else if (payByGift.getFlag()) {
+            return "G";
+        }
+        else if (payByCheck.getFlag()) {
+            return "K";
+        }
+        return "";
+    }
+
+    public String hasDisCount() {
+        if (hasDiscount.getFlag()) {
+            return "   off";
+        }
+        return "";
     }
 }

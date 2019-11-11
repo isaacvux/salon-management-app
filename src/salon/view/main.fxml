@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="salon.view.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="salon.view.Controller">
    <center>
       <GridPane alignment="CENTER" gridLinesVisible="true" BorderPane.alignment="BOTTOM_CENTER">
         <columnConstraints>
@@ -28,11 +28,11 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="194.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="273.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="288.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="77.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
         </rowConstraints>
@@ -49,8 +49,8 @@
             </Label>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ComboBox fx:id="comboBox_0" prefHeight="78.0" prefWidth="120.0" promptText="Name" />
-                  <Button fx:id="addButton_0" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_0" prefHeight="88.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_0" disable="true" mnemonicParsing="false" prefHeight="53.0" prefWidth="80.0" text="Add">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font></Button>
@@ -58,8 +58,8 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <ComboBox fx:id="comboBox_1" prefHeight="50.0" prefWidth="120.0" promptText="Name" />
-                  <Button fx:id="addButton_1" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_1" prefHeight="78.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_1" disable="true" mnemonicParsing="false" prefHeight="66.0" prefWidth="78.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font></Button>
@@ -67,8 +67,8 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
-                  <ComboBox fx:id="comboBox_2" prefHeight="50.0" prefWidth="120.0" promptText="Name" />
-                  <Button fx:id="addButton_2" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_2" prefHeight="94.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_2" disable="true" mnemonicParsing="false" prefHeight="65.0" prefWidth="78.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font></Button>
@@ -76,8 +76,8 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
                <children>
-                  <ComboBox fx:id="comboBox_3" prefHeight="50.0" prefWidth="120.0" promptText="Name" />
-                  <Button fx:id="addButton_3" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_3" prefHeight="92.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_3" disable="true" mnemonicParsing="false" prefHeight="68.0" prefWidth="78.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font></Button>
@@ -85,8 +85,8 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
                <children>
-                  <ComboBox fx:id="comboBox_4" prefHeight="50.0" prefWidth="120.0" promptText="Name" />
-                  <Button fx:id="addButton_4" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_4" prefHeight="87.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_4" disable="true" mnemonicParsing="false" prefHeight="74.0" prefWidth="78.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font></Button>
@@ -102,24 +102,30 @@
                </children></HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <children>
-                  <ListView fx:id="listView_4b" prefHeight="85.0" prefWidth="207.0" />
+                  <ListView fx:id="listView_4b" prefHeight="124.0" prefWidth="248.0" />
                </children></HBox>
-            <ListView fx:id="listView_0b" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
-            <ListView fx:id="listView_1b" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ListView fx:id="listView_0b" prefHeight="105.0" prefWidth="239.0" GridPane.rowIndex="2" />
+            <ListView fx:id="listView_1b" prefHeight="111.0" prefWidth="261.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label fx:id="infoLabel_0" prefHeight="50.0" prefWidth="236.0" text="Label" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
             <Label fx:id="infoLabel_1" prefHeight="87.0" prefWidth="277.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
                <children>
-                  <ComboBox fx:id="comboBox_5" prefHeight="50.0" prefWidth="120.0" />
-                  <Button fx:id="addButton_5" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_5" prefHeight="82.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_5" disable="true" mnemonicParsing="false" prefHeight="67.0" prefWidth="78.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -128,8 +134,8 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <ComboBox fx:id="comboBox_6" prefHeight="50.0" prefWidth="120.0" />
-                  <Button fx:id="addButton_6" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_6" prefHeight="78.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_6" disable="true" mnemonicParsing="false" prefHeight="70.0" prefWidth="78.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -138,8 +144,8 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <children>
-                  <ComboBox fx:id="comboBox_7" prefHeight="50.0" prefWidth="120.0" />
-                  <Button fx:id="addButton_7" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_7" prefHeight="75.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_7" disable="true" mnemonicParsing="false" prefHeight="65.0" prefWidth="78.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -148,8 +154,8 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <children>
-                  <ComboBox fx:id="comboBox_8" prefHeight="50.0" prefWidth="120.0" />
-                  <Button fx:id="addButton_8" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_8" prefHeight="70.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_8" disable="true" mnemonicParsing="false" prefHeight="64.0" prefWidth="78.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -158,8 +164,8 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <children>
-                  <ComboBox fx:id="comboBox_9" prefHeight="50.0" prefWidth="120.0" />
-                  <Button fx:id="addButton_9" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Add">
+                  <ComboBox fx:id="comboBox_9" prefHeight="72.0" prefWidth="145.0" promptText="Name" />
+                  <Button fx:id="addButton_9" disable="true" mnemonicParsing="false" prefHeight="60.0" prefWidth="78.0" text="Add">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -171,8 +177,8 @@
             <ListView fx:id="listView_7a" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <ListView fx:id="listView_8a" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
             <ListView fx:id="listView_9a" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <ListView fx:id="listView_5b" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6" />
-            <ListView fx:id="listView_6b" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ListView fx:id="listView_5b" prefHeight="107.0" prefWidth="277.0" GridPane.rowIndex="6" />
+            <ListView fx:id="listView_6b" prefHeight="113.0" prefWidth="264.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <ListView fx:id="listView_7b" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
             <ListView fx:id="listView_8b" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
             <ListView fx:id="listView_9b" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
@@ -180,41 +186,65 @@
                <font>
                   <Font size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
             <Label fx:id="infoLabel_6" prefHeight="43.0" prefWidth="208.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <font>
                   <Font size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
             <Label fx:id="infoLabel_2" prefHeight="136.0" prefWidth="312.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
             <Label fx:id="infoLabel_3" prefHeight="71.0" prefWidth="240.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
             <Label fx:id="infoLabel_4" prefHeight="56.0" prefWidth="260.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
             <Label fx:id="infoLabel_7" prefHeight="59.0" prefWidth="227.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="7">
                <font>
                   <Font size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
             <Label fx:id="infoLabel_8" prefHeight="52.0" prefWidth="227.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="7">
                <font>
                   <Font size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
             <Label fx:id="infoLabel_9" prefHeight="47.0" prefWidth="246.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="7">
                <font>
                   <Font size="18.0" />
                </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </Label>
          </children>
          <BorderPane.margin>

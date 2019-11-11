@@ -11,16 +11,14 @@
       <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/model/Turn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/model/Turn.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/PrintController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/PrintController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/TurnController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/TurnController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/print.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/print.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/turn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SalonManagement3/salon/view/turn.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/salon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/salon/model/Turn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/model/Turn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/salon/view/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/view/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/salon/view/PrintController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/view/PrintController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/salon/view/TurnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/view/TurnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/salon/view/print.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/view/print.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/salon/view/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/view/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/salon/view/turn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/salon/view/turn.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -316,6 +314,8 @@
       <workItem from="1573155944024" duration="418000" />
       <workItem from="1573188321153" duration="8833000" />
       <workItem from="1573243149288" duration="3861000" />
+      <workItem from="1573436685598" duration="181000" />
+      <workItem from="1573447385270" duration="11373000" />
     </task>
     <task id="LOCAL-00001" summary="Add Settings Scene">
       <created>1572066576327</created>
