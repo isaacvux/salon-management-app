@@ -165,6 +165,7 @@ public class PrintController implements Initializable {
 
 //            writeForThisPerson(writer, "Isaac");
 
+            // preIndex points to the first Date that the shop opened in that 2 weeks
             int prefIndex = 0;
 
             for(int i = 0; i < numOfDays; i++) {
@@ -173,11 +174,18 @@ public class PrintController implements Initializable {
                 }
             }
 
+            double baseSubTotal;
+            double tipSubTotal;
+            double total;
             // num of X need to be checked
             for(int x = 0; x < 11; x++) {
-                writer.write("...........................");
+                writer.write("...........................\n");
                 writer.write(dates.get(prefIndex).getPersons().get(x).getFirstName() + "\n");
                 writer.write("Date\t\tBase\tTip\n");
+
+                baseSubTotal = 0.0;
+                tipSubTotal = 0.0;
+                total = 0.0;
 
                 for(int y = 0; y < numOfDays; y++) {
                     if(reasons[y] == null) {
@@ -185,13 +193,20 @@ public class PrintController implements Initializable {
                             writer.write(dates.get(y).getDate() + "\tAbsented\n");
                         }
                         else {
-                            writer.write(dates.get(y).getDate() + "\t" + dates.get(y).getPersons().get(x).getTotal() + "\t" + dates.get(x).getPersons().get(1).getTip() + "\n");
+                            writer.write(dates.get(y).getDate() + "\t" + dates.get(y).getPersons().get(x).getTotal() + "\t" + dates.get(y).getPersons().get(x).getTip() + "\n");
+
+                            baseSubTotal += dates.get(y).getPersons().get(x).getTotal();
+                            tipSubTotal += dates.get(y).getPersons().get(x).getTip();
                         }
                     }
                     else {
                         writer.write(reasons[y] + "\n");
                     }
                 }
+                writer.write("----------\n");
+                writer.write("Sub Total: \t" + baseSubTotal + "\t" + tipSubTotal + "\n");
+                total = baseSubTotal*0.6;
+                writer.write("Total: \t\t" + (Double) Math.ceil(total));
                 writer.write("\n\n");
             }
 
