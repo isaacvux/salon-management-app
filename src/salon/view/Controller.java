@@ -452,57 +452,71 @@ public class Controller implements Initializable {
     }
 
     public void choosingName(Person oldPerson, Person newPerson, int index, ComboBox comboBox, Button addButton, ListView listView_a, ListView listView_b, Label thisLabel) {
-        if (newPerson != null) {
-            main.tempPerson = newPerson;
+        ///
+        if(isNotRepeated(newPerson, index)) {
+            if (newPerson != null) {
+                main.tempPerson = newPerson;
 
-            newPerson.setIndex(index);
+                newPerson.setIndex(index);
 
-            listView_a.setItems(newPerson.getTurns());
+                listView_a.setItems(newPerson.getTurns());
 
-            listView_a.setStyle("-fx-font-size : 16.0");
+                listView_a.setStyle("-fx-font-size : 16.0");
 
-            listView_b.setItems(newPerson.getBonuses());
+                listView_b.setItems(newPerson.getBonuses());
 
-            listView_b.setStyle("-fx-font-size : 16.0");
+                listView_b.setStyle("-fx-font-size : 16.0");
 
-            addButton.setDisable(false);
+                addButton.setDisable(false);
 
-            thisLabel.setStyle("-fx-background-color: rgb(253,191,45)");
+                thisLabel.setStyle("-fx-background-color: rgb(253,191,45)");
 
-            main.tempLabel = thisLabel;
+                main.tempLabel = thisLabel;
 
-            updateInfo();
+                updateInfo();
 
-            System.out.println("\n" + newPerson.getFirstName() + " is logging in...");
+                System.out.println("\n" + newPerson.getFirstName() + " is logging in...");
 
-            // save point
-            main.writeInformation(main.tempLocalDate);
+                // save point
+                main.writeInformation(main.tempLocalDate);
+            }
+
+            if(isNotRepeated(oldPerson,index)) {
+                if (oldPerson != null) {
+                    oldPerson.setIndex(-1);
+                }
+            }
+
+            System.out.println("The list is now...");
+
+            for (int i = 0; i < main.date.getPersons().size(); i++) {
+                System.out.print(main.date.getPersons().get(i).toString());
+                System.out.println(": " + main.date.getPersons().get(i).getIndex());
+            }
         }
-
-
-        if (oldPerson != null) {
-            oldPerson.setIndex(-1);
+        else {
+            System.out.println("we here");
+//            comboBox.getButtonCell().setText("Name");
+//            comboBox.getButtonCell().setItem(null);
         }
-
-
-        System.out.println("The list is now...");
-
-        for (int i = 0; i < main.date.getPersons().size(); i++) {
-            System.out.print(main.date.getPersons().get(i).toString());
-            System.out.println(": " + main.date.getPersons().get(i).getIndex());
-        }
-
-
-//        if(comboBox_1.getSelectionModel().getSelectedItem() == null) {
-//            System.out.println("There you go bro...");
-//        }
 
     }
 
-    public boolean checkLoggedInPeople(Person person) {
-        for(int i = 0; i < main.date.getPersons().size(); i++) {
-            if(main.date.getPersons().get(i).equals(person)) {
-                return false;
+    public boolean isNotRepeated(Person thisPerson, int index) {
+        for (int i = 0; i < index; i++) {
+            if (comboBoxes.get(i).getSelectionModel().getSelectedItem() != null) {
+                if(comboBoxes.get(i).getSelectionModel().getSelectedItem().equals(thisPerson)) {
+//                    System.out.println(thisPerson.getFirstName() + " has already logged in.");
+                    return false;
+                }
+            }
+        }
+        for (int i = (index + 1); i < comboBoxes.size(); i++) {
+            if (comboBoxes.get(i).getSelectionModel().getSelectedItem() != null) {
+                if(comboBoxes.get(i).getSelectionModel().getSelectedItem().equals(thisPerson)) {
+//                    System.out.println(thisPerson.getFirstName() + " has already logged in.");
+                    return false;
+                }
             }
         }
         return true;
