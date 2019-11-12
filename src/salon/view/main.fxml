@@ -261,11 +261,11 @@
    <left>
       <VBox prefHeight="800.0" prefWidth="50.0" BorderPane.alignment="CENTER">
          <children>
-            <Region prefHeight="139.0" prefWidth="50.0" />
+            <Region prefHeight="0.0" prefWidth="50.0" />
             <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
             <Button fx:id="historyButton" mnemonicParsing="false" onAction="#handleHistoryButton" prefHeight="150.0" prefWidth="50.0" text="His" />
             <Button fx:id="printButton" mnemonicParsing="false" onAction="#handlePrintButton" prefHeight="150.0" prefWidth="50.0" text="Print" />
-            <Button fx:id="preferencesButton" mnemonicParsing="false" onAction="#handlePreferencesButton" prefHeight="87.0" prefWidth="50.0" text="Settings" />
+            <Button fx:id="preferencesButton" mnemonicParsing="false" onAction="#handlePreferencesButton" prefHeight="150.0" prefWidth="50.0" text="Settings" />
          </children>
       </VBox>
    </left>
