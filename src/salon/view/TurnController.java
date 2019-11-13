@@ -64,6 +64,9 @@ public class TurnController implements Initializable {
 
     // Panel buttons
     @FXML
+    public Button passButton;
+
+    @FXML
     public Button deleteButton;
 
     @FXML
@@ -292,33 +295,33 @@ public class TurnController implements Initializable {
     }
 
     public void setTurnTextField() {
-        baseTextField.setText("" + main.tempTurn.getBase());
-        tipTextField.setText("" + main.tempTurn.getTip());
-        offTextField.setText("" + main.tempTurn.getOff());
+        baseTextField.setText("" + (int) main.tempTurn.getBase());
+        tipTextField.setText("" + (int) main.tempTurn.getTip());
+        offTextField.setText("" + (int) main.tempTurn.getOff());
 
         if(main.tempTurn.hasDiscount.getFlag()) {
 
-            serviceTextField.setText("~" + main.tempTurn.getService());
+            serviceTextField.setText("~" + (int) main.tempTurn.getService());
 
             if(main.tempTurn.payByCard.getFlag()) {
-                cardTextField.setText("~" + main.tempTurn.getCard());
+                cardTextField.setText("~" + (int) main.tempTurn.getCard());
             }
             if(main.tempTurn.payByCash.getFlag()) {
-                cashTextField.setText("~" + main.tempTurn.getCash());
+                cashTextField.setText("~" + (int) main.tempTurn.getCash());
             }
             if(main.tempTurn.payByGift.getFlag()) {
-                giftTextField.setText("~" + main.tempTurn.getGift());
+                giftTextField.setText("~" + (int) main.tempTurn.getGift());
             }
             if(main.tempTurn.payByCheck.getFlag()) {
-                checkTextField.setText("~" + main.tempTurn.getCheck());
+                checkTextField.setText("~" + (int) main.tempTurn.getCheck());
             }
         }
         else {
-            serviceTextField.setText("" + main.tempTurn.getService());
-            cardTextField.setText("" + main.tempTurn.getCard());
-            cashTextField.setText("" + main.tempTurn.getCash());
-            giftTextField.setText("" + main.tempTurn.getGift());
-            checkTextField.setText("" + main.tempTurn.getCheck());
+            serviceTextField.setText("" + (int) main.tempTurn.getService());
+            cardTextField.setText("" + (int) main.tempTurn.getCard());
+            cashTextField.setText("" + (int) main.tempTurn.getCash());
+            giftTextField.setText("" + (int) main.tempTurn.getGift());
+            checkTextField.setText("" + (int) main.tempTurn.getCheck());
         }
 
     }
@@ -496,6 +499,8 @@ public class TurnController implements Initializable {
         changeButtonsColor(main.tempTurn.payByCheck, checkButton);
 
         changeButtonsColor(main.tempTurn.hasDiscount, offButton);
+
+        changeButtonsColor(main.tempTurn.isPassed, passButton);
     }
 
     public void setPaymentTextFieldStatus() {
@@ -565,8 +570,29 @@ public class TurnController implements Initializable {
     }
 
     @FXML
+    public void handlePassButton() {
+        main.tempTurn.isPassed.setFlag(true);
+
+        main.tempPerson.getTurns().add(main.tempTurn);
+
+        // Set isAdjusted back to false
+        if(main.controller.isAdjusted) {
+            main.controller.isAdjusted = false;
+        }
+
+        main.writeInformation(main.tempLocalDate);
+
+        main.primaryStage.setScene(main.mainScene);
+    }
+
+    @FXML
     public void handleCancelButton() {
         main.primaryStage.setScene(main.mainScene);
+
+        // Set isAdjusted back to false
+        if(main.controller.isAdjusted) {
+            main.controller.isAdjusted = false;
+        }
     }
 
     @FXML
@@ -574,6 +600,11 @@ public class TurnController implements Initializable {
         if(main.tempList != null) {
             main.tempList.remove(main.tempTurn);
             main.writeInformation(main.tempLocalDate);
+        }
+
+        // Set isAdjusted back to false
+        if(main.controller.isAdjusted) {
+            main.controller.isAdjusted = false;
         }
 
         main.controller.updateInfo();
@@ -586,9 +617,13 @@ public class TurnController implements Initializable {
     public void handleDoneButton() {
 //        main.controller.updatePersonInfo(main.tempPerson, main.tempTurnInfo, main.tempMoneyInfo);
         if(main.controller.isAdjusted == false) {
+            if ((main.tempTurn.getBase() + main.tempTurn.getOff()) == 0) {
+                main.tempPerson.getTurns().add(main.tempTurn);
+            }
             if (main.tempTurn.getBase() + main.tempTurn.getOff() >= 25.00) {
                 main.tempPerson.getTurns().add(main.tempTurn);
-            } else {
+            }
+            else {
                 main.tempPerson.getBonuses().add(main.tempTurn);
             }
         }

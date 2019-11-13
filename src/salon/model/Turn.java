@@ -24,6 +24,8 @@ public class Turn {
 
     public BooleanWrapper hasDiscount;
 
+    public BooleanWrapper isPassed;
+
     // Manicure
     public BooleanWrapper basicMa;
 
@@ -94,16 +96,16 @@ public class Turn {
     private ArrayList<BooleanWrapper> services;
 
     public Turn(){
-        this.service = 0.0;
-        this.base = 0.0;
-        this.tip = 0.0;
+        this.service = 0;
+        this.base = 0;
+        this.tip = 0;
 
-        this.card = 0.0;
-        this.cash = 0.0;
-        this.gift = 0.0;
-        this.check = 0.0;
+        this.card = 0;
+        this.cash = 0;
+        this.gift = 0;
+        this.check = 0;
 
-        this.off = 0.0;
+        this.off = 0;
 
         payByCard = new BooleanWrapper(false);
         payByCash = new BooleanWrapper(false);
@@ -111,6 +113,8 @@ public class Turn {
         payByCheck = new BooleanWrapper(false);
 
         hasDiscount = new BooleanWrapper(false);
+
+        isPassed = new BooleanWrapper(false);
 
         // Manicure Manicure Manicure
         this.basicMa = new BooleanWrapper(false);
@@ -180,6 +184,7 @@ public class Turn {
         this.waxingFacial = new BooleanWrapper(false);
 
         services = new ArrayList<>();
+
         services.add(basicMa);
         services.add(deluxeMa);
         services.add(oasisMa);
@@ -299,7 +304,7 @@ public class Turn {
 
     @Override
     public String toString() {
-        return paymentMethod() + "   " + base + " + " + tip + hasDisCount();
+        return paymentMethod() + "   \t" + (int)base + "\t  |\t" + (int)tip + "\t" + hasDiscount() + isPassed();
     }
 
     public String checkPoint() {
@@ -320,12 +325,22 @@ public class Turn {
         else if (payByCheck.getFlag()) {
             return "K";
         }
+        else if (isPassed.getFlag()) {
+            return "X";
+        }
         return "";
     }
 
-    public String hasDisCount() {
+    public String hasDiscount() {
         if (hasDiscount.getFlag()) {
             return "   off";
+        }
+        return "";
+    }
+
+    public String isPassed() {
+        if (isPassed.getFlag()) {
+            return "   passed";
         }
         return "";
     }

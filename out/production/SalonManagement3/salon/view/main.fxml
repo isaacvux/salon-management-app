@@ -61,7 +61,7 @@
                   <ComboBox fx:id="comboBox_1" prefHeight="78.0" prefWidth="145.0" promptText="Name" />
                   <Button fx:id="addButton_1" disable="true" mnemonicParsing="false" prefHeight="66.0" prefWidth="78.0" text="Add">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font></Button>
                </children>
             </HBox>

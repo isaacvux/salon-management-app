@@ -321,15 +321,15 @@ public class Controller implements Initializable {
 
         isAdjusted = false;
 
-        try {
-            cardImage = new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/card.png"));
-            cashImage= new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/cash.png"));
-            giftImage = new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/gift.png"));
-            checkImage = new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/check.png"));
-            offImage = new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/off.png"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            cardImage = new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/card.png"));
+//            cashImage= new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/cash.png"));
+//            giftImage = new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/gift.png"));
+//            checkImage = new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/check.png"));
+//            offImage = new Image(new FileInputStream("/Users/isaacvu/Desktop/Data/off.png"));
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
         // Set 0
         comboBox_0.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> choosingName((Person) oldValue, (Person) newValue, 0, comboBox_0, addButton_0, listView_0a, listView_0b, infoLabel_0));
@@ -469,9 +469,11 @@ public class Controller implements Initializable {
 
                 addButton.setDisable(false);
 
-                thisLabel.setStyle("-fx-background-color: rgb(253,191,45)");
+                thisLabel.setStyle("-fx-background-color: rgb(253,191,45); -fx-font-size : 18.0; -fx-font-weight: bold");
 
                 main.tempLabel = thisLabel;
+
+//                main.tempLabel.setStyle("-fx-font-weight: bold");
 
                 updateInfo();
 
@@ -623,7 +625,7 @@ public class Controller implements Initializable {
         main.tempPerson.setTotal(total);
         main.tempPerson.setTip(tip);
 
-        main.tempLabel.setText(main.tempPerson.getTotal() + " + " + main.tempPerson.getTip());
+        main.tempLabel.setText((int)main.tempPerson.getTotal() + "\t   |\t   " + (int)main.tempPerson.getTip());
     }
 
     public void updateListView(ListView thisListView) {

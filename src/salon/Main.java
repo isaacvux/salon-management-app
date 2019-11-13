@@ -54,8 +54,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        fileDirectory = "/Users/isaacvu/Desktop/Data/";
-//        fileDirectory = "C:\Users\oasis\OneDrive\Desktop\";
+        fileDirectory = "/Users/isaacvu/OneDrive - Oklahoma City Community College/Data/";
+//        fileDirectory = "C:\\Users\\oasis\\OneDrive - Oklahoma City Community College\\Data\\";
 
         tempLocalDate = LocalDate.now();
 
@@ -252,8 +252,8 @@ public class Main extends Application {
 
     public void readTurn(BufferedReader reader, ObservableList<Turn> list, Turn turn) {
         try {
-            turn.setBase(Double.parseDouble(reader.readLine()));
             turn.setService(Double.parseDouble(reader.readLine()));
+            turn.setBase(Double.parseDouble(reader.readLine()));
             turn.setTip(Double.parseDouble(reader.readLine()));
 
             turn.setCard(Double.parseDouble(reader.readLine()));
@@ -269,6 +269,8 @@ public class Main extends Application {
             turn.payByCheck.setFlag(Boolean.parseBoolean(reader.readLine()));
 
             turn.hasDiscount.setFlag(Boolean.parseBoolean(reader.readLine()));
+
+            turn.isPassed.setFlag(Boolean.parseBoolean(reader.readLine()));
 
             // Manicure
             turn.basicMa.setFlag(Boolean.parseBoolean(reader.readLine()));
@@ -398,6 +400,10 @@ public class Main extends Application {
 
             // off
             writer.write("" + turn.hasDiscount.getFlag());
+            writer.write("\n");
+
+            // is passed
+            writer.write("" + turn.isPassed.getFlag());
             writer.write("\n");
 
             // manicure
